@@ -8,7 +8,7 @@
 TUMBLR THEME: Opticant | © Rachael (@rhaegara)
 Inspired by Tumblr Official
 
-    Version 1.0 | released June 9th, 2020
+    Version 1.0.1 | updated June 10th, 2020
 
 For theme information, help, FAQs, and more:
     https://rachaelthemes.com/opticant
@@ -137,7 +137,9 @@ By using this theme, you agree to these terms and conditions:
         // fetch blog username/URL
         var blogName = "{Name}";
         // change iframe url to include new variables
-        var newURL = "https://www.tumblr.com/dashboard/iframe?tumblelogName=" + blogName + "&amp;src=https%3A%2F%2F" + blogName + ".tumblr.com%2F#%7B%22searchQuery%22%3A%22%22%2C%22pushDown%22%3Atrue%2C%22useThemeColors%22%3Atrue%2C%22scrollHeader%22%3Afalse%2C%22themeHeaderImage%22%3A%22%22%2C%22themeBackgroundColor%22%3A%22%23" + color + "%22%2C%22themeAccentColor%22%3A%22%23" + text + "%22%2C%22isOpticaLike%22%3Atrue%2C%22shouldHideBlogSearchBar%22%3Afalse%7D";
+        var newURL = "https://www.tumblr.com/dashboard/iframe?tumblelogName=" + blogName + "&src=https%3A%2F%2F" + blogName + ".tumblr.com%2F#%7B%22searchQuery%22%3A%22%22%2C%22pushDown%22%3Atrue%2C%22useThemeColors%22%3Atrue%2C%22scrollHeader%22%3Afalse%2C%22themeHeaderImage%22%3A%22%22%2C%22themeBackgroundColor%22%3A%22%23" + color + "%22%2C%22themeAccentColor%22%3A%22%23" + text + "%22%2C%22isOpticaLike%22%3Atrue%2C%22shouldHideBlogSearchBar%22%3Afalse%7D";
+        {block:Posts}{block:PermalinkPage}{block:Date}var postID = "{PostID}";
+        newURL = "https://www.tumblr.com/dashboard/iframe?tumblelogName=" + blogName + "&pid=" + postID + "&src=https%3A%2F%2F" + blogName + ".tumblr.com%2Fpost%2F" + postID + "#%7B%22searchQuery%22%3A%22%22%2C%22pushDown%22%3Afalse%2C%22useThemeColors%22%3Atrue%2C%22scrollHeader%22%3Afalse%2C%22themeHeaderImage%22%3A%22%22%2C%22themeBackgroundColor%22%3A%22%23" + color + "%22%2C%22themeTitleColor%22%3A%22%23" + text + "%22%2C%22themeAccentColor%22%3A%22%23" + text + "%22%2C%22isOpticaLike%22%3Atrue%2C%22shouldHideBlogSearchBar%22%3Afalse%7D";{/block:Date}{/block:PermalinkPage}{/block:Posts}
         // change URL source within iframe
         $('#new-tumblr-controls').attr('src', newURL);
     });
