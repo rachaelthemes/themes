@@ -1380,10 +1380,10 @@ a.theme-credit svg { height: 16px; width: 16px; }
                 <div class="reblog-item-avatar">
                     {block:IsActive}
                     <a target="_blank" href="{Permalink}"><img src="{PortraitURL-64}"></a>
-                    {block:IsActive}
+                    {/block:IsActive}
                     {block:IsDeactivated}
                     <span class="deactivated"><img src="{PortraitURL-64}"></span>
-                    {block:IsDeactivated}
+                    {/block:IsDeactivated}
                 </div>
                 <div class="reblog-item-username">
                     {block:IsActive}
