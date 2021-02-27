@@ -8,7 +8,7 @@
 TUMBLR THEME: Twitter | © Rachael (@rachaelthemes)
 Inspired by Twitter. I am not affiliated by Twitter nor do I claim to own any Twitter assets used in this theme.
 
-    Version 1.0.0 | released February 26th, 2021
+    Version 1.0.1 | released February 27th, 2021
 
 For theme information, help, FAQs, and more:
     https://rachaelthemes.com/twitter
@@ -20,7 +20,7 @@ By using this theme, you agree to these terms and conditions:
 CREDITS
 
  – Inspiration from Twitter
- – customFont.js by @rachaelthemes
+ – customFonts.js by @rachaelthemes
  – tumblrControls.js by @rachaelthemes
  – pullTags.js and pullAccounts.js by @rachaelthemes
  – roundNotes.js by @rachaelthemes
@@ -531,6 +531,20 @@ nav a.current-page svg {
     display: inline;
 }
 
+/* mobile nav */
+
+.mobile-nav {
+    display: none;
+    text-align: center;
+    background: var(--footer);
+}
+
+.mobile-nav a {
+    display: inline-block;
+    color: var(--p-gray);
+    margin: 5px 10px;
+}
+
 /* ---------- SIDEBAR ---------- */
 
 aside {
@@ -884,7 +898,6 @@ article {
     border: 1px var(--border) solid; 
     border-radius: 6px; 
     margin: 0 0 30px 0;
-    min-height: 50px;   
     padding: 20px;
 }
 
@@ -1551,6 +1564,10 @@ img.answer-avatar {
     color: var(--accent);
 }
 
+{block:IndexPage}.post-tags.hide-tags {
+    display: none;
+}{/block:IndexPage}
+
 /* ---------- PERMALINK NOTES CONTAINER ---------- */
 
 article.notes-container {
@@ -1629,7 +1646,7 @@ ol.notes li.more_notes_link_container {
 
 .pagination a {
     display: inline-block;
-    margin: 0 15px;
+    margin: 10px 15px;
     background: var(--background);
     color: var(--bg-accent);
     padding: 10px 15px;
@@ -1714,24 +1731,47 @@ iframe#new-tumblr-controls {
 
 @media ( max-width: calc( {select:Post Size} + 58px + 5px ) ) { 
     main {
+        display: inline;
         width: 100%;
         margin-top: 55px;
     }
     section {
-        width: calc(100% - 58px - 5px);
-        min-width: 400px;
+        width: 100%;
     }
     header {
-        width: calc(100% - 1px);
+        width: 100%;
         border-radius: 0;
-        border-width: 0 0 1px 1px;
+        border-width: 0 0 1px 0;
         margin-bottom: 0;
     }
     article {
-        width: calc(100% - 41px);
+        width: calc(100% - 40px);
         border-radius: 0;
-        border-width: 0 0 1px 1px;
+        border-width: 0 0 1px 0;
         margin: 0;
+    }
+    .pagination {
+        margin: 30px 0;
+    }
+    nav {
+        display: none;
+    }
+    article.mobile-nav {
+        display: block;
+    }
+    aside {
+        display: block;
+        width: 100%;
+    }
+    aside > div > div:not(.footer) {
+        display: none;
+    }
+    .footer {
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+    .footer > div {
+        display: none;
     }
 }
 
@@ -1766,25 +1806,6 @@ iframe#new-tumblr-controls {
         <b>{block:ifSubmitLinkTitle}{text:Submit Link Title}{/block:ifSubmitLinkTitle}{block:ifNotSubmitLinkTitle}Submit{/block:ifNotSubmitLinkTitle}</b>
     </a>
     {/block:SubmissionsEnabled}
-    {block:ifExploreLinkURL}{block:ifExploreLinkTitle}
-    <a href="{text:Explore Link URL}" class="custom-link">
-        <svg viewBox="0 0 24 24"><g><path d="M21 7.337h-3.93l.372-4.272c.036-.412-.27-.775-.682-.812-.417-.03-.776.27-.812.683l-.383 4.4h-6.32l.37-4.27c.037-.413-.27-.776-.68-.813-.42-.03-.777.27-.813.683l-.382 4.4H3.782c-.414 0-.75.337-.75.75s.336.75.75.75H7.61l-.55 6.327H3c-.414 0-.75.336-.75.75s.336.75.75.75h3.93l-.372 4.272c-.036.412.27.775.682.812l.066.003c.385 0 .712-.295.746-.686l.383-4.4h6.32l-.37 4.27c-.036.413.27.776.682.813l.066.003c.385 0 .712-.295.746-.686l.382-4.4h3.957c.413 0 .75-.337.75-.75s-.337-.75-.75-.75H16.39l.55-6.327H21c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm-6.115 7.826h-6.32l.55-6.326h6.32l-.55 6.326z"></path></g></svg>
-        <b>{text:Explore Link Title}</b>
-    </a>
-    {/block:ifExploreLinkTitle}{/block:ifExploreLinkURL}
-    {block:ifProfileLinkURL}{block:ifProfileLinkTitle}
-    <a href="{text:Profile Link URL}" class="custom-link">
-        <svg viewBox="0 0 24 24"><g><path d="M12 11.816c1.355 0 2.872-.15 3.84-1.256.814-.93 1.078-2.368.806-4.392-.38-2.825-2.117-4.512-4.646-4.512S7.734 3.343 7.354 6.17c-.272 2.022-.008 3.46.806 4.39.968 1.107 2.485 1.256 3.84 1.256zM8.84 6.368c.162-1.2.787-3.212 3.16-3.212s2.998 2.013 3.16 3.212c.207 1.55.057 2.627-.45 3.205-.455.52-1.266.743-2.71.743s-2.255-.223-2.71-.743c-.507-.578-.657-1.656-.45-3.205zm11.44 12.868c-.877-3.526-4.282-5.99-8.28-5.99s-7.403 2.464-8.28 5.99c-.172.692-.028 1.4.395 1.94.408.52 1.04.82 1.733.82h12.304c.693 0 1.325-.3 1.733-.82.424-.54.567-1.247.394-1.94zm-1.576 1.016c-.126.16-.316.246-.552.246H5.848c-.235 0-.426-.085-.552-.246-.137-.174-.18-.412-.12-.654.71-2.855 3.517-4.85 6.824-4.85s6.114 1.994 6.824 4.85c.06.242.017.48-.12.654z"></path></g></svg>
-        <b>{text:Profile Link Title}</b>
-    </a>
-    {/block:ifProfileLinkTitle}{/block:ifProfileLinkURL}
-    {block:ifBookmarksLinkURL}{block:ifBookmarksLinkTitle}
-    <a href="{text:Bookmarks Link URL}" class="custom-link">
-        <svg viewBox="0 0 24 24"><g><path d="M19.9 23.5c-.157 0-.312-.05-.442-.144L12 17.928l-7.458 5.43c-.228.164-.53.19-.782.06-.25-.127-.41-.385-.41-.667V5.6c0-1.24 1.01-2.25 2.25-2.25h12.798c1.24 0 2.25 1.01 2.25 2.25v17.15c0 .282-.158.54-.41.668-.106.055-.223.082-.34.082zM12 16.25c.155 0 .31.048.44.144l6.71 4.883V5.6c0-.412-.337-.75-.75-.75H5.6c-.413 0-.75.338-.75.75v15.677l6.71-4.883c.13-.096.285-.144.44-.144z"></path></g></svg>
-        <b>{text:Bookmarks Link Title}</b>
-    </a>
-    {/block:ifBookmarksLinkTitle}{/block:ifBookmarksLinkURL}
-    
     {block:HasPages}{block:Pages}
     <span class="page-link {select:Page Link 1 Icon}1 {select:Page Link 2 Icon}2 {select:Page Link 3 Icon}3">
         <a href="{URL}" class="{CurrentState}">
@@ -1816,7 +1837,7 @@ iframe#new-tumblr-controls {
     <div class="header-follow">
         <a href="/archive"><svg viewBox="0 0 512 512"><path d="M20 24h10c6.627 0 12 5.373 12 12v94.625C85.196 57.047 165.239 7.715 256.793 8.001 393.18 8.428 504.213 120.009 504 256.396 503.786 393.181 392.834 504 256 504c-63.926 0-122.202-24.187-166.178-63.908-5.113-4.618-5.354-12.561-.482-17.433l7.069-7.069c4.503-4.503 11.749-4.714 16.482-.454C150.782 449.238 200.935 470 256 470c117.744 0 214-95.331 214-214 0-117.744-95.331-214-214-214-82.862 0-154.737 47.077-190.289 116H164c6.627 0 12 5.373 12 12v10c0 6.627-5.373 12-12 12H20c-6.627 0-12-5.373-12-12V36c0-6.627 5.373-12 12-12zm321.647 315.235l4.706-6.47c3.898-5.36 2.713-12.865-2.647-16.763L272 263.853V116c0-6.627-5.373-12-12-12h-8c-6.627 0-12 5.373-12 12v164.147l84.884 61.734c5.36 3.899 12.865 2.714 16.763-2.646z"></path></svg></a>
         <a href="https://www.tumblr.com/message/{Name}" target="_blank"><svg viewBox="0 0 512 512"><path d="M464 4.3L16 262.7C-7 276-4.7 309.9 19.8 320L160 378v102c0 30.2 37.8 43.3 56.7 20.3l60.7-73.8 126.4 52.2c19.1 7.9 40.7-4.2 43.8-24.7l64-417.1C515.7 10.2 487-9 464 4.3zM192 480v-88.8l54.5 22.5L192 480zm224-30.9l-206.2-85.2 199.5-235.8c4.8-5.6-2.9-13.2-8.5-8.4L145.5 337.3 32 290.5 480 32l-64 417.1z"></path></svg></a>
-        <a class="follow-button" href="https://www.tumblr.com/follow/{Name}">Follow</a>
+        <a class="follow-button" href="https://www.tumblr.com/follow/{Name}">{lang:Follow}</a>
     </div>
     <div class="header-avatar">
     {block:ifAvatarImage}
@@ -1845,6 +1866,13 @@ iframe#new-tumblr-controls {
     </div>
 </header>
 {/block:IndexPage}
+
+<article class="post mobile-nav">
+    <a href="/" {block:Homepage}class="current-page"{/block:Homepage}>{block:ifHomeLinkTitle}{text:Home Link Title}{/block:ifHomeLinkTitle}{block:ifNotHomeLinkTitle}{lang:Home}{/block:ifNotHomeLinkTitle}</a>
+    {block:AskEnabled}<a href="/ask" {block:AskPage}class="current-page"{/block:AskPage}>{block:ifAskLinkTitle}{text:Ask Link Title}{/block:ifAskLinkTitle}{block:ifNotAskLinkTitle}Ask{/block:ifNotAskLinkTitle}</a>{/block:AskEnabled}
+    {block:SubmissionsEnabled}<a href="/submit" {block:SubmitPage}class="current-page"{/block:SubmitPage}>{block:ifSubmitLinkTitle}{text:Submit Link Title}{/block:ifSubmitLinkTitle}{block:ifNotSubmitLinkTitle}Submit{/block:ifNotSubmitLinkTitle}</a>{/block:SubmissionsEnabled}
+    {block:HasPages}{block:Pages}<a href="{URL}" class="{CurrentState}">{Label}</a> {/block:Pages}{/block:HasPages}
+</article>
 
 <!-- posts -->
 
@@ -2030,9 +2058,9 @@ iframe#new-tumblr-controls {
     </a></div>
     {/block:RebloggedFrom}
 </div>
-{block:ifNotHideTags}{block:HasTags}<div class="post-tags">
+{block:HasTags}<div class="post-tags {block:ifHideTags}hide-tags{/block:ifHideTags}">
     {block:Tags}<a class="post-tag" href="{TagURL}">#{Tag}</a> {/block:Tags}
-</div>{/block:HasTags}{/block:ifNotHideTags}
+</div>{/block:HasTags}
 {/block:Date}
 
 </article>
@@ -2050,7 +2078,7 @@ iframe#new-tumblr-controls {
 {block:Pagination}
 <div class="pagination">
     {block:PreviousPage}
-    <a href="{PreviousPage}">Previous</a>
+    <a href="{PreviousPage}">{lang:Previous}</a>
     {/block:PreviousPage}
     {block:JumpPagination length="3"}{block:CurrentPage}
         <a class="jump-current">{PageNumber}</a>
@@ -2058,7 +2086,7 @@ iframe#new-tumblr-controls {
         <a class="next" href="{URL}">{PageNumber}</a>
     {/block:JumpPage}{/block:JumpPagination}
     {block:NextPage}
-    <a href="{NextPage}">Next</a>
+    <a href="{NextPage}">{lang:Next}</a>
     {/block:NextPage}
 </div>
 {/block:Pagination}
@@ -2128,7 +2156,7 @@ iframe#new-tumblr-controls {
     </div>
     {/block:ifTagsseparatedbycommas}
     <div class="footer">
-        <a>© {CopyrightYears}</a> <a href="/">Home</a> <a href="/archive">Archive</a><!-- theme credit (please don't change or remove!!! thank u) --> <a href="https://rachaelthemes.tumblr.com/" target="_blank">Theme</a> <a href="https://www.tumblr.com/" target="_blank">Powered by Tumblr</a> <a href="https://www.twitter.com/" target="_blank">Inspired by Twitter</a>
+        <a>© {CopyrightYears}</a> <a href="/">{lang:Home}</a> <a href="/archive">{lang:Archive}</a><!-- theme credit (please don't change or remove!!! thank u) --> <a href="https://rachaelthemes.tumblr.com/" target="_blank">Theme</a> <a href="https://www.tumblr.com/" target="_blank">{lang:Powered by Tumblr}</a> <a href="https://www.twitter.com/" target="_blank">{block:English}Inspired by Twitter{/block:English}{block:NotEnglish}Twitter{/block:NotEnglish}</a>
         <div style="height: 70px;"></div>
     </div>
 </div></aside>
