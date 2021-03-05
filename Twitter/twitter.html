@@ -8,7 +8,7 @@
 TUMBLR THEME: Twitter | © Rachael (@rachaelthemes)
 Inspired by Twitter. I am not affiliated by Twitter nor do I claim to own any Twitter assets used in this theme.
 
-    Version 1.0.1 | released February 27th, 2021
+    Version 1.0.2 | released March 5th, 2021
 
 For theme information, help, FAQs, and more:
     https://rachaelthemes.com/twitter
@@ -170,7 +170,7 @@ And a HUGE shoutout to @annasthms for helping me debug some of the jQuery I wrot
 
 <!--tumblr fonts & photoset css--><link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/lnAqp0hdx/twitter.css">
 
-<!--twitter.min.js--><script src="https://static.tumblr.com/zgb0z1w/oqGqp3se5/twitter.min.js"></script>
+<!--twitter.min.js--><script src="https://static.tumblr.com/zgb0z1w/qF0qpig86/twitter.min.js"></script>
 
 <!--js for tumblr controls, fonts, and tags--><script type="text/javascript">$(document).ready(function(){customFonts("{select:Font}");var c="{select:Color Scheme}";var s,t;if(c=="default"){s="#ffffff";t="#657786";}else if(c=="dim"){s="#15212c";t="#ffffff";}else if(c=="lights"){s="#040405";t="#ffffff";}else if(c=="accent"){s="#ffffff";t="#666666";}else if(c=="accent-full"){s="{color:Accent}";t="#ffffff";}else if(c=="tumblr"){s="#061a34";t="#ffffff";}else if(c=="tumblr-dark"){s="#000000";t="#ffffff";};tumblrControls(s,t,"{Name}"{block:Posts}{block:PermalinkPage}{block:Date},"{PostID}","true"{/block:Date}{/block:PermalinkPage}{/block:Posts});{block:ifTagsSeparatedByCommas}pullTags("{text:Tags separated by commas}","{Name}");{/block:ifTagsSeparatedByCommas}{block:ifAccountsSeparatedByCommas}pullAccounts("{text:Accounts Separated By Commas}");{/block:ifAccountsSeparatedByCommas}$(".shorten-link").show();});</script>
 
@@ -1594,19 +1594,25 @@ article.notes-container ol.notes img.avatar {
 }
 
 ol.notes a.avatar_frame {
-    float: left;
+    position: absolute;
     border-radius: 100%;
     line-height: 0;
     height: 25px;
     width: 25px;
-    margin-right: 15px;
+    margin: 0 0 0 -40px;
 }
 
 ol.notes li {
     min-height: 25px;
-    padding: 0;
+    padding: 0 0 0 40px;
     margin: 20px;
-    line-height: 25px;
+    line-height: 21px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+ol.notes span.action {
+    margin-top: 2px;
 }
 
 ol.notes .note a {
@@ -1618,7 +1624,7 @@ ol.notes blockquote {
     border: 1px solid var(--border);
     font-size: inherit;
     line-height: 1.3125;
-    margin: 5px 0 0 40px;
+    margin: 5px 0 0 0;
     quotes: none;
     padding: 15px;
     border-radius: 6px;
@@ -1694,7 +1700,13 @@ iframe#new-tumblr-controls {
     z-index: 10;
 }
 
-.iframe-container { border-bottom: 1px var(--border) solid; }
+.iframe-container { 
+    border-bottom: 1px var(--border) solid; 
+}
+
+.tmblr-iframe-pushdown {
+    padding-top: 0 !important;
+}
 
 /* ---------- SCREEN SIZE RESPONSIVENESS ---------- */
 
@@ -1731,7 +1743,7 @@ iframe#new-tumblr-controls {
 
 @media ( max-width: calc( {select:Post Size} + 58px + 5px ) ) { 
     main {
-        display: inline;
+        display: block;
         width: 100%;
         margin-top: 55px;
     }
@@ -1749,6 +1761,9 @@ iframe#new-tumblr-controls {
         border-radius: 0;
         border-width: 0 0 1px 0;
         margin: 0;
+    }
+    article.notes-container {
+        width: 100%;
     }
     .pagination {
         margin: 30px 0;
@@ -1768,7 +1783,7 @@ iframe#new-tumblr-controls {
     }
     .footer {
         text-align: center;
-        margin: 0 0 30px 0;
+        margin: 30px 0;
     }
     .footer > div {
         display: none;
