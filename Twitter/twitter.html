@@ -8,7 +8,7 @@
 TUMBLR THEME: Twitter | © Rachael (@rachaelthemes)
 Inspired by Twitter. I am not affiliated by Twitter nor do I claim to own any Twitter assets used in this theme.
 
-    Version 1.0.2 | released March 5th, 2021
+    Version 1.0.3 | released April 17th, 2021
 
 For theme information, help, FAQs, and more:
     https://rachaelthemes.com/twitter
@@ -40,13 +40,9 @@ And a HUGE shoutout to @annasthms for helping me debug some of the jQuery I wrot
     <meta content="{MetaDescription}" name="description"/>
     {block:ifName}
     <title>{text:Name} (@{Name})</title>
-    <meta content="{text:Name} (@{Name})" property="og:site_name"/>
-    <meta content="{text:Name} (@{Name})" property="og:title"/>
     {/block:ifName}
     {block:ifNotName}
     <title>{Title} (@{Name})</title>
-    <meta content="{Title} (@{Name})" property="og:site_name"/>
-    <meta content="{Title} (@{Name})" property="og:title"/>
     {/block:ifNotName}
     <meta content="website" property="og:type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,6 +57,7 @@ And a HUGE shoutout to @annasthms for helping me debug some of the jQuery I wrot
     <link rel="apple-touch-icon" href="{image:Favicon}"/>
     {/block:ifFaviconImage}
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
 <!-- tumblr variables -->
     <!-- image options -->
