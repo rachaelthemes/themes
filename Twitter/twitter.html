@@ -8,7 +8,7 @@
 TUMBLR THEME: Twitter | © Rachael (@rachaelthemes)
 Inspired by Twitter. I am not affiliated by Twitter nor do I claim to own any Twitter assets used in this theme.
 
-    Version 1.0.3 | released April 17th, 2021
+    Version 1.0.4 | released May 14th, 2021
 
 For theme information, help, FAQs, and more:
     https://rachaelthemes.com/twitter
@@ -167,7 +167,7 @@ And a HUGE shoutout to @annasthms for helping me debug some of the jQuery I wrot
 
 <!--tumblr fonts & photoset css--><link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/lnAqp0hdx/twitter.css">
 
-<!--twitter.min.js--><script src="https://static.tumblr.com/zgb0z1w/iUuqpirng/twitter.min.js"></script>
+<!--twitter.min.js--><script src="https://static.tumblr.com/zgb0z1w/6Trqt3wo4/twitter.min.js"></script>
 
 <!--js for tumblr controls, fonts, and tags--><script type="text/javascript">$(document).ready(function(){customFonts("{select:Font}");var c="{select:Color Scheme}";var s,t;if(c=="default"){s="#ffffff";t="#657786";}else if(c=="dim"){s="#15212c";t="#ffffff";}else if(c=="lights"){s="#040405";t="#ffffff";}else if(c=="accent"){s="#ffffff";t="#666666";}else if(c=="accent-full"){s="{color:Accent}";t="#ffffff";}else if(c=="tumblr"){s="#061a34";t="#ffffff";}else if(c=="tumblr-dark"){s="#000000";t="#ffffff";};tumblrControls(s,t,"{Name}"{block:Posts}{block:PermalinkPage}{block:Date},"{PostID}","{RelativePermalink}","true"{/block:Date}{/block:PermalinkPage}{/block:Posts});{block:ifTagsSeparatedByCommas}pullTags("{text:Tags separated by commas}","{Name}");{/block:ifTagsSeparatedByCommas}{block:ifAccountsSeparatedByCommas}pullAccounts("{text:Accounts Separated By Commas}");{/block:ifAccountsSeparatedByCommas}$(".shorten-link").show();});</script>
 
@@ -958,7 +958,8 @@ article .post-reblog-item > * {
     max-width: 100%;
 }
 
-article .reblog-item-body a {
+article .reblog-item-body a,
+article > p > a {
     color: var(--accent);
 }
 
@@ -1446,6 +1447,11 @@ p.asker {
     margin-bottom: 1em; 
 }
 
+.answer-q p:not(.answer-user) a,
+.answer-a p:not(.answer-user) a {
+    text-decoration: underline;
+}
+
 img.answer-avatar {
     position: relative;
     border-radius: 100%;
@@ -1923,20 +1929,29 @@ iframe#new-tumblr-controls {
     <div class="image-container">
         <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></a>
     </div>
-{block:NotReblog}{block:Caption}{Caption}{/block:Caption}{/block:NotReblog}
+    {block:NotReblog}{block:Caption}
+        {Caption}
+        {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+    {/block:Caption}{/block:NotReblog}
 {/block:Photo}
 
 {block:Photoset}
     <div class="photoset-container">
         <div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></div>{/block:Photos}</div>
     </div>
-    {block:NotReblog}{block:Caption}{Caption}{/block:Caption}{/block:NotReblog}
+    {block:NotReblog}{block:Caption}
+        {Caption}
+        {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+    {/block:Caption}{/block:NotReblog}
 {/block:Photoset}
 
 {block:Quote}
     <div class="quote {Length}">
         <div class="quote-text">{Quote}</div>
-        {block:Source}<div class="quote-source">{Source}</div>{/block:Source}
+        {block:Source}<div class="quote-source">
+            {Source}
+            {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+        </div>{/block:Source}
     </div>
 {/block:Quote}
 
@@ -1960,7 +1975,10 @@ iframe#new-tumblr-controls {
         </a>
     </div>
     {block:NotReblog}{block:Description}
-    <div class="reblog-item-body">{Description}</div>
+    <div class="reblog-item-body">
+        {Description}
+        {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+    </div>
     {/block:Description}{/block:NotReblog}
 {/block:Link}
 
@@ -1996,12 +2014,18 @@ iframe#new-tumblr-controls {
 		</div>
 	</div>
 	{/block:AudioPlayer}
-    {block:NotReblog}{block:Caption}{Caption}{/block:Caption}{/block:NotReblog}
+    {block:NotReblog}{block:Caption}
+        {Caption}
+        {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+    {/block:Caption}{/block:NotReblog}
 {/block:Audio}
 
 {block:Video}
     <div class="video">{Video-500}</div>
-    {block:NotReblog}{block:Caption}{Caption}{/block:Caption}{/block:NotReblog}
+    {block:NotReblog}{block:Caption}
+        {Caption}
+        {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+    {/block:Caption}{/block:NotReblog}
 {/block:Video}
 
 {block:Answer}
@@ -2021,7 +2045,10 @@ iframe#new-tumblr-controls {
         <img class="answer-avatar" src="{AnswererPortraitURL-96}">
     </div>
     {/block:Answerer}
-    {block:NotReblog}{Replies}{/block:NotReblog}
+    {block:NotReblog}
+        {Replies}
+        {block:More}<p><a href="{Permalink}">Show this thread</a></p>{/block:More}
+    {/block:NotReblog}
 {/block:Answer}
 
 <!-- reblog chains -->
