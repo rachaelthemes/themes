@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+{block:Options}<!-- tumblr variables -->
+<!-- image options -->
+<meta name="image:Header" content=""/>
+<meta name="image:Background" content=""/>
+<meta name="image:Avatar" content=""/>
+<meta name="image:Favicon" content=""/>
+<!-- font options -->
+<meta name="font:Title Font" content="Helvetica Neue"/>
+<!-- color options -->
+<meta name="color:Background Color 1" content="#a1d788"/>
+<meta name="color:Background Color 2" content="#85cecc" />
+<meta name="color:Background Text" content="#ffffff"/>
+<meta name="color:Accent" content="#53b6b3"/>
+<!-- title font weight -->
+<meta name="select:Title Font Weight" content="400" title="Regular">
+<meta name="select:Title Font Weight" content="700" title="Bold">
+<!--body font options-->
+<meta name="select:Body Font" content="Favorit" title="Tumblr (Favorit)">
+<meta name="select:Body Font" content="Helvetica Neue" title="System Default">
+<meta name="select:Body Font" content="Archivo" title="Archivo">
+<meta name="select:Body Font" content="Arvo" title="Arvo">
+<meta name="select:Body Font" content="Barlow" title="Barlow">
+<meta name="select:Body Font" content="Comfortaa" title="Comfortaa">
+<meta name="select:Body Font" content="Courier Prime" title="Courier Prime">
+<meta name="select:Body Font" content="Fira Sans" title="Fira Sans">
+<meta name="select:Body Font" content="Heebo" title="Heebo">
+<meta name="select:Body Font" content="IBM Plex Mono" title="IBM Plex Mono">
+<meta name="select:Body Font" content="IBM Plex Sans" title="IBM Plex Sans">
+<meta name="select:Body Font" content="Inconsolata" title="Inconsolata">
+<meta name="select:Body Font" content="Inria Serif" title="Inria Serif">
+<meta name="select:Body Font" content="K2D" title="K2D">
+<meta name="select:Body Font" content="Karla" title="Karla">
+<meta name="select:Body Font" content="Lato" title="Lato">
+<meta name="select:Body Font" content="Lora" title="Lora">
+<meta name="select:Body Font" content="Mali" title="Mali">
+<meta name="select:Body Font" content="Muli" title="Muli">
+<meta name="select:Body Font" content="Noto Sans" title="Noto Sans">
+<meta name="select:Body Font" content="Nunito" title="Nunito">
+<meta name="select:Body Font" content="Open Sans" title="Open Sans">
+<meta name="select:Body Font" content="Overpass" title="Overpass">
+<meta name="select:Body Font" content="Poppins" title="Poppins">
+<meta name="select:Body Font" content="PT Sans" title="PT Sans">
+<meta name="select:Body Font" content="Quicksand" title="Quicksand">
+<meta name="select:Body Font" content="Roboto" title="Roboto">
+<meta name="select:Body Font" content="Roboto Mono" title="Roboto Mono">
+<meta name="select:Body Font" content="Roboto Slab" title="Roboto Slab">
+<meta name="select:Body Font" content="Rubik" title="Rubik">
+<meta name="select:Body Font" content="Solway" title="Solway">
+<meta name="select:Body Font" content="Source Code Pro" title="Source Code Pro">
+<meta name="select:Body Font" content="Source Sans Pro" title="Source Sans Pro">
+<meta name="select:Body Font" content="Space Mono" title="Space Mono">
+<meta name="select:Body Font" content="Work Sans" title="Work Sans">
+<!-- font size -->
+<meta name="select:Font Size" content="16px" title="16px (Default)">
+<meta name="select:Font Size" content="14px" title="14px">
+<meta name="select:Font Size" content="15px" title="15px">
+<meta name="select:Font Size" content="18px" title="18px">
+<!-- post color scheme -->
+<meta name="select:Color Scheme" content="cs0" title="Default">
+<meta name="select:Color Scheme" content="cs1" title="Tumblr">
+<meta name="select:Color Scheme" content="cs2" title="Dark Mode">
+<meta name="select:Color Scheme" content="cs3" title="Low Contrast">
+<meta name="select:Color Scheme" content="cs4" title="Cement">
+<meta name="select:Color Scheme" content="cs5" title="Cybernetic">
+<meta name="select:Color Scheme" content="cs6" title="Canary">
+<meta name="select:Color Scheme" content="cs7" title="Pastel">
+<meta name="select:Color Scheme" content="cs8" title="Blended Light">
+<meta name="select:Color Scheme" content="cs9" title="Blended Dark">
+<!-- background styles -->
+<meta name="select:Background" content="solid" title="Solid (Default)">
+<meta name="select:Background" content="gradient" title="Gradient">
+<meta name="select:Background" content="full" title="Full-Size Image">
+<meta name="select:Background" content="repeat" title="Repeat Image">
+<meta name="select:Background" content="bg-fixed bf1" title="Top-Left Image">
+<meta name="select:Background" content="bg-fixed bf2" title="Top-Center Image">
+<meta name="select:Background" content="bg-fixed bf3" title="Top-Right Image">
+<meta name="select:Background" content="bg-fixed bf4" title="Center-Left Image">
+<meta name="select:Background" content="bg-fixed bf5" title="Center-Center Image">
+<meta name="select:Background" content="bg-fixed bf6" title="Center-Right Image">
+<meta name="select:Background" content="bg-fixed bf7" title="Bottom-Left Image">
+<meta name="select:Background" content="bg-fixed bf8" title="Bottom-Center Image">
+<meta name="select:Background" content="bg-fixed bf9" title="Bottom-Right Image">
+<!-- avatar shape -->
+<meta name="select:Avatar Shape" content="4px" title="Square">
+<meta name="select:Avatar Shape" content="72px" title="Circle">
+<meta name="select:Avatar Shape" content="0px" title="Uncropped">
+<!-- header height -->
+<meta name="select:Header Height" content="none" title="Default">
+<meta name="select:Header Height" content="100px" title="100px">
+<meta name="select:Header Height" content="150px" title="150px">
+<meta name="select:Header Height" content="200px" title="200px">
+<meta name="select:Header Height" content="250px" title="250px">
+<meta name="select:Header Height" content="300px" title="300px">
+<!-- sidebar width -->
+<meta name="select:Sidebar Width" content="260px" title="260px (Default)">
+<meta name="select:Sidebar Width" content="200px" title="200px">
+<meta name="select:Sidebar Width" content="300px" title="300px">
+<meta name="select:Sidebar Width" content="350px" title="350px">
+<meta name="select:Sidebar Width" content="400px" title="400px">
+<!-- sidebar type -->
+<meta name="select:Sidebar Location" content="s-left" title="Left (Default)">
+<meta name="select:Sidebar Location" content="s-right" title="Right">
+<meta name="select:Sidebar Location" content="s-above" title="Above Posts">
+<!-- post width -->
+<meta name="select:Post Size" content="500px" title="500px (Default)">
+<meta name="select:Post Size" content="400px" title="400px">
+<meta name="select:Post Size" content="540px" title="540px">
+<meta name="select:Post Size" content="600px" title="600px">
+<meta name="select:Post Size" content="700px" title="700px">
+<!-- space between posts -->
+<meta name="select:Post Spacing" content="30px" title="30px (Default)">
+<meta name="select:Post Spacing" content="50px" title="50px">
+<meta name="select:Post Spacing" content="70px" title="70px">
+<!-- theme credit style -->
+<meta name="select:Theme Credit" content="credit1" title="Corner (Icon)">
+<meta name="select:Theme Credit" content="credit2" title="Corner (Text)">
+<meta name="select:Theme Credit" content="credit3" title="Sidebar">
+<!-- boolean options -->
+<meta name="if:Endless Scroll" content="0"/>
+<meta name="if:Font Override" content="0"/>
+<meta name="if:Inline Media Spacing" content="0"/>
+<meta name="if:Show Post Source" content="0"/>
+<meta name="if:Uppercase Sidebar Links" content="0"/>
+<!-- text options -->
+<meta name="text:Title" content="Title"/>
+<meta name="text:Description" content="Description"/>
+<meta name="text:Home Link Title" content="Home"/>
+<meta name="text:Ask Link Title" content="Ask"/>
+<meta name="text:Submit Link Title" content="Submit"/>
+<meta name="text:Archive Link Title" content="Archive"/>
+<meta name="text:Ask Box Text" content="This text goes before your ask box on the Ask page!"/>
+<!-- end tumblr variables -->{/block:Options}
+<html lang="{block:English}en-US{/block:English}{block:German}de-DE{/block:German}{block:French}fr-FR{/block:French}{block:Italian}it-IT{/block:Italian}{block:Japanese}ja-JP{/block:Japanese}{block:Turkish}tr-TR{/block:Turkish}{block:Spanish}es-ES{/block:Spanish}{block:Russian}ru-RU{/block:Russian}{block:Polish}pl-PL{/block:Polish}{block:PortuguesePT}pt-PT{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl-NL{/block:Dutch}{block:Indonesian}id-ID{/block:Indonesian}{block:Hindi}hi-IN{/block:Hindi}{block:Korean}ko-KR{/block:Korean}{block:ChineseSimplified}zh-CN{/block:ChineseSimplified}{block:ChineseTraditional}zh-TW{/block:ChineseTraditional}{block:ChineseHK}zh-HK{/block:ChineseHK}">
+
+<!--
+
+TUMBLR THEME: Ocular | © Rachael (@rachaelthemes)
+Inspired by Tumblr Official
+
+    Version 2.0.0 | updated June 14th, 2022
+
+For theme information, help, FAQs, and more:
+    https://rachaelthemes.com/ocular
+
+By using this theme, you agree to these terms and conditions:
+    https://rachaelthemes.com/terms
+
+
+CREDITS
+
+ – Favorit and Optica/Tumblr-Icons fonts by Tumblr
+ – customFont.js and tumblrControls.js by @rachaelthemes
+ – Resize Videos by @shythemes
+ – customaudio.js by @annasthms
+ – photosets.css by @annasthms and @eggdesign
+ 
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="{MetaDescription}" name="description">
+    <title>{block:ifTitle}{text:Title}{/block:ifTitle}{block:ifNotTitle}{Title}{/block:ifNotTitle}</title>
+    <meta content="website" property="og:type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="shortcut icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
+    <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
+    {NewPostStyles}
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/sMxrdhbet/ocular.css">
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/dgnrdhapm/ocular-photoset.min.css">
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://static.tumblr.com/zgb0z1w/PWhrddf6c/ocular.min.js"></script>{block:ifEndlessScroll}{block:IndexPage}
+<script src="https://static.tumblr.com/zgb0z1w/GlErdhc2z/ocular-endless.min.js" type="module"></script>{/block:IndexPage}{/block:ifEndlessScroll}
+<script type="text/javascript">$(document).ready(function(){customFonts("{select:Body Font}");tumblrControls("{color:Background Color 1}","{color:Background Text}","{Name}"{block:Posts}{block:PermalinkPage}{block:Date},"{PostID}","{RelativePermalink}","true"{/block:Date}{/block:PermalinkPage}{/block:Posts});});</script>
+
+<style type="text/css">
+
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    --ft: {select:Body Font}, "HelveticaNeue", Helvetica, Arial, sans-serif; /* body font */
+    --tft: {font:Title Font};  /* title font */
+    --bg1: {color:Background Color 1};  /* background color 1 */
+    --bg2: {color:Background Color 2};  /* background color 2 */
+    --bgt: {color:Background Text};  /* background color 2 */
+    --act: {color:Accent};  /* accent color */
+    --RGBact: {RGBcolor:Accent}; /* RGB accent color */
+    --RGBbgt: {RGBcolor:Background Text}; /* RGB background text */
+    --bg: #fff;  /* post background */
+    --bqt: #f2f2f2;  /* blockquotes */
+    --bdr: rgba(0,0,0,0.13);  /* post borders */
+    --qst: #f2f2f2;  /* questions */
+    --pgs: rgba(0,0,0,0.25);  /* audio progress bar */
+    --drk: #444;  /* text */
+    --med: #888;  /* gray text */
+    --lgt: #a7a7a7;  /* faded text */
+    --fsz: {select:Font Size}; /* font size */
+    --tfw: {select:Title Font Weight};  /* title font weight */
+    --avs: {select:Avatar Shape};  /* avatar shape */
+    --hdh: {select:Header Height};  /* header height */
+    --sbw: {select:Sidebar Width};  /* sidebar width */
+    --psz: {select:Post Size};  /* post width */
+    --psp: {select:Post Spacing};  /* space between posts */
+}
+
+/* ---------- CODE THAT WON'T WORK IN THE CSS FILE ---------- */
+
+body.full, 
+body.repeat, 
+body.bg-fixed { 
+    background-image: url("{image:Background}"); 
+}
+
+section#posts[aria-busy="true"]::after {
+    content: "{lang:Loading}...";
+}
+
+/* ---------- SCREEN SIZE RESPONSIVENESS ---------- */
+
+@media (max-width: calc({select:Sidebar Width} + {select:Post Size} + {select:Post Spacing} + {select:Post Spacing} + {select:Post Spacing} + {select:Post Spacing} + 4px)) { 
+
+    section#sidebar { height: auto; width: var(--psz); max-width: 100vw; }
+    
+    .sidebar { 
+        position: relative; 
+        width: var(--psz); 
+        margin-top: 0; 
+        max-width: calc( 100vw - (var(--psp)*2));
+    }
+    
+    main#page-container { 
+        flex-direction: column; 
+        justify-content: flex-start; 
+        width: calc( var(--psz) + 2px );
+        padding-top: var(--psp);
+        max-width: calc( 100vw - (var(--psp)*2));
+    }
+    
+    section#posts, 
+    section#sidebar, 
+    article.post { 
+        max-width: calc( 100vw - (var(--psp)*2)); 
+    }
+
+}
+
+@media (max-width: 478px) {
+    
+    body {
+        --psz: 100%;
+        --psp: 10px;
+    }
+    
+    main#page-container {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+    }
+    
+    main#page-container section#posts, 
+    main#page-container section#sidebar, 
+    main#page-container .sidebar,
+    main#page-container article.post {
+        max-width: 100%;
+        border-radius: 0;
+        word-break: break-word;
+    }
+    
+    main#page-container section#posts {
+        padding-top: 0;
+    }
+    
+    main#page-container section#sidebar,
+    main#page-container article.post{
+        margin: 0 0 var(--psp) 0;
+    }
+    
+    main#page-container .header-image {
+        border-radius: 0;
+    }{block:ifNotHeaderImage}{block:ifAvatarImage}
+    
+    main#page-container section#sidebar {
+        margin-top: 46px;
+    }{/block:ifAvatarImage}{/block:ifNotHeaderImage}
+    
+}
+
+/* ---------- CUSTOM CSS ---------- */
+
+{CustomCSS}
+
+/* ---------- END CSS ---------- */
+
+</style>
+
+</head>
+
+<body class="{select:Background} {select:Color Scheme} {select:Theme Credit}{block:ifFontOverride} font-override{/block:ifFontOverride}{block:ifUppercaseSidebarLinks} uppercase-links{/block:ifUppercaseSidebarLinks}{block:ifEndlessScroll}{block:IndexPage} endless-scroll{/block:IndexPage}{/block:ifEndlessScroll}{block:AskPage} ask-page{/block:AskPage}{block:SubmitPage} submit-page{/block:SubmitPage}">
+
+<!-- tumblr iframe (replaced with jquery) -->
+
+<div class="iframe-container"><iframe id="new-tumblr-controls" src="" frameborder="0" scrolling="no" name="unified-controls" class="tmblr-iframe tmblr-iframe--unified-controls tmblr-iframe--loaded iframe-controls--desktop"></iframe></div>
+
+<main id="page-container" class="{select:Sidebar Location}">
+
+<!-- sidebar container -->
+
+<section id="sidebar">
+    <div class="sidebar">{block:ifHeaderImage}
+        <div class="header-image">
+            <img src="{image:Header}" alt="{block:ifTitle}{text:Title}{/block:ifTitle}{block:ifNotTitle}{Title}{/block:ifNotTitle}">
+        </div>{/block:ifHeaderImage}{block:ifAvatarImage}
+        <div class="avatar-image avatar-{select:Avatar Shape}">
+            <a href="/"><img src="{image:Avatar}" alt="{Name}"></a>
+        </div>{/block:ifAvatarImage}{block:ifTitle}
+        <div class="sidebar-title"><a href="/">{text:Title}</a></div>{/block:ifTitle}{block:ifDescription}
+        <div class="sidebar-description">{text:Description}</div>{/block:ifDescription}
+        <div class="sidebar-links">
+            <a href="/" class="{block:HomePage}current-page{/block:Homepage}">{block:ifHomeLinkTitle}{text:Home Link Title}{/block:ifHomeLinkTitle}{block:ifNotHomeLinkTitle}{lang:Home}{/block:ifNotHomeLinkTitle}</a>{block:AskEnabled}
+            <a href="/ask" class="{block:AskPage}current-page{/block:AskPage}">{block:ifAskLinkTitle}{text:Ask Link Title}{/block:ifAskLinkTitle}{block:ifNotAskLinkTitle}Ask{/block:ifNotAskLinkTitle}</a>{/block:AskEnabled}{block:SubmissionsEnabled}
+            <a href="/submit" class="{block:SubmitPage}current-page{/block:SubmitPage}">{block:ifSubmitLinkTitle}{text:Submit Link Title}{/block:ifSubmitLinkTitle}{block:ifNotSubmitLinkTitle}Submit{/block:ifNotSubmitLinkTitle}</a>{/block:SubmissionsEnabled}
+            <a href="/archive" class="archive-link">{block:ifArchiveLinkTitle}{text:Archive Link Title}{/block:ifArchiveLinkTitle}{block:ifNotArchiveLinkTitle}{lang:Archive}{/block:ifNotArchiveLinkTitle}</a>{block:HasPages}{block:Pages}
+            <a href="{URL}" class="page-link {CurrentState}">{Label}</a>{/block:Pages}{/block:HasPages}
+            <a href="https://rachaelthemes.tumblr.com/" target="_blank" class="theme-credit3">Theme</a>
+        </div>
+    </div>
+</section>
+
+<!-- post container -->
+
+<section id="posts" class="{block:ifInlineMediaSpacing}media-spacing{/block:ifInlineMediaSpacing}"{block:ifEndlessScroll}{block:Pagination} role="feed"{/block:Pagination}{/block:ifEndlessScroll}>{block:SearchPage}{block:NoSearchResults}<article class="post alert"><h2 class="post-title">{lang:Sorry no search results found}.</h2></article>{/block:NoSearchResults}{/block:SearchPage}{block:NoPosts}<article class="post alert"><h2 class="post-title">{lang:This minimalist Tumblr has no posts}</h2></article>{/block:NoPosts}{block:Posts inlineMediaWidth="700"}
+
+<!-- POST{block:Date} ID {PostID}{/block:Date} -->
+
+<article {block:Date}id="{PostID}" {/block:Date}class="post post-{PostType} {block:Date}has-date{/block:Date}">{block:RebloggedFrom}
+
+<!-- post header -->
+
+<div class="post-header">
+    <a class="reblog-link" href="{ReblogParentURL}">
+    <i class="tmblr-icon reblog-icon"></i> {ReblogParentName}</a>
+</div>{/block:RebloggedFrom}
+
+<!-- post content -->
+
+{block:Text}{block:Title}<h2 class="post-title">
+    <a href="{Permalink}">{Title}</a>
+</h2>{/block:Title}{/block:Text}{block:Photo}<div class="image-container">
+    <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+        <img src="{PhotoURL-HighRes}" {block:HighRes}class="high-res"{/block:HighRes} alt="{PhotoAlt}" />
+    </a>
+</div>{/block:Photo}{block:Panorama}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}{/block:Panorama}{block:Photoset}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">
+    {block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)">
+        <img src="{PhotoURL-HighRes}" />
+    </div>{/block:Photos}
+</div>{/block:Photoset}{block:Quote}<div class="quote {Length}">{Quote}</div>
+{block:Source}<div class="quote-source">{Source}</div>{/block:Source}{/block:Quote}{block:Link}<div class="link-container {block:Thumbnail}thumb{/block:Thumbnail}">
+    <a {Target} href="{URL}" class="link">{block:Thumbnail}
+        <div class="link-thumbnail">
+            <img src="{Thumbnail-HighRes}" alt="" />
+        </div>{/block:Thumbnail}
+        <div class="link-text-wrapper clearfix">
+            <div class="link-text">{block:Host}
+                <div class="link-host">{Host}</div>{/block:Host}
+                <h2 class="link-title">{Name}</h2>{block:Excerpt}
+                <div class="link-excerpt">{Excerpt}</div>{/block:Excerpt}{block:Author}
+                <div class="link-author">{Author}</div>{/block:Author}
+            </div>
+        </div>
+    </a>
+</div>{/block:Link}{block:Chat}{block:Title}<h2 class="post-title">
+        <a href="{Permalink}">{Title}</a>
+    </h2>{/block:Title}
+    <div class="chat">{block:Lines}
+        <div class="chat-line">{block:Label}<span class="chat-label">{Label}</span>{/block:Label} {Line}</div>
+    {/block:Lines}</div>
+{/block:Chat}{block:Audio}{block:AudioPlayer}{AudioPlayer}
+<div class="audio_player {block:AlbumArt}album_art{/block:AlbumArt}">
+    <div class="seek-art">
+	    {audio:Seekbar}
+	    {block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
+    </div>
+	{audio:AudioButtons}
+	<div class="audio_info">
+	{block:TrackName}<div><b>{TrackName}</b></div>{/block:TrackName}
+	{block:Artist}<div>{Artist}</div>{/block:Artist}
+	</div>
+</div>{/block:AudioPlayer}{/block:Audio}{block:Video}<div class="video">{Video-500}</div>{/block:Video}{block:Answer}<div id="question">
+    <img class="ask-avatar" src="{AskerPortraitURL-96}">
+    <div class="ask-content">
+        <p class="asker"><strong>{Asker}</strong> asked:</p>
+        <p class="ask-body">{Question}</p>
+    </div>
+</div>{block:Answerer}
+<div id="answer">
+    <img class="ask-avatar" src="{AnswererPortraitURL-96}">
+    <div class="ask-content">
+        <p class="asker"><strong>{Answerer}</strong> answered:</p>
+        <div class="ask-body">{Answer}</div>
+    </div>
+</div>{/block:Answerer}{/block:Answer}
+
+{block:NotReblog}<!-- original post content -->
+
+{block:AskPage}{block:ifAskBoxText}<div class="ask-box-text">{text:Ask Box Text}</div>{/block:ifAskBoxText}{/block:AskPage}<div class="post-caption">
+    {block:Text}{Body}{/block:Text}{block:Photo}{block:Caption}{Caption}{/block:Caption}{/block:Photo}{block:Panorama}{block:Caption}{Caption}{/block:Caption}{/block:Panorama}{block:Photoset}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}{block:Link}{block:Description}{Description}{/block:Description}{/block:Link}{block:Audio}{block:Caption}{Caption}{/block:Caption}{/block:Audio}{block:Video}{block:Caption}{Caption}{/block:Caption}{/block:Video}{block:Answer}{Replies}{/block:Answer}
+</div>{/block:NotReblog}{block:RebloggedFrom}<!-- reblog chains -->
+
+<div class="post-reblog-list">
+    {block:Reblogs}<div class="post-reblog-item">
+        <div class="post-reblog-header">
+            <div class="reblog-item-avatar">{block:IsActive}
+                <a target="_blank" href="{Permalink}"><img src="{PortraitURL-64}" alt="{Username}"></a>{/block:IsActive}{block:IsDeactivated}
+                <span class="deactivated"><img src="{PortraitURL-64}" alt="{Username}"></span>{/block:IsDeactivated}
+            </div>
+            <div class="reblog-item-username">{block:IsActive}
+                <a target="_blank" class="post-tumblelog-name" href="{Permalink}">{Username}</a>{/block:IsActive}{block:IsDeactivated}
+                <span class="deactivated">{Username}</span>{/block:IsDeactivated}
+            </div>
+        </div>
+        {Body}
+    </div>{/block:Reblogs}
+</div>{/block:RebloggedFrom}{block:Date}
+
+<!-- post footer -->
+
+<div class="post-metadata">{block:Homepage}{block:PinnedPostLabel}
+    <a class="pinned-label meta-item">Pinned Post</a>{/block:PinnedPostLabel}{/block:Homepage}{block:ifShowPostSource}{block:RebloggedFrom}
+    <a class="post-source meta-item"href="{ReblogRootURL}">Source: {ReblogRootName}</a>
+{/block:RebloggedFrom}{/block:ifShowPostSource}{block:HasTags}{block:Tags}
+    <a class="post-tag meta-item" href="{TagURL}">#{Tag}</a>{/block:Tags}{/block:HasTags}
+</div>
+
+<div class="post-footer">
+    <div class="post-date-notes">
+        <a class="post-date" href="{Permalink}" title="{DayOfWeek}, {Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}">{TimeAgo}</a>
+        {block:NoteCount}with <a class="post-notes" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+    </div>
+    <div class="post-controls">
+        <div class="control tmblr-icon reblog-control">{ReblogButton}</div>
+        <div class="control tmblr-icon like-control">{LikeButton}</div>
+    </div>
+</div>{/block:Date}
+
+</article>{block:PermalinkPage}{block:PostNotes}
+
+<!-- post notes -->
+
+<article class="post notes-container">
+    {PostNotes-64}
+</article>{/block:PostNotes}{/block:PermalinkPage}{/block:Posts}{block:Pagination}<!-- pagination -->
+
+<div class="pagination">
+    <a class="prev" {block:PreviousPage} href="{PreviousPage}" {/block:PreviousPage}>{lang:Back}</a>
+    <a id="next" class="next" {block:NextPage} href="{NextPage}" {/block:NextPage}>{lang:Next}</a>
+</div>{/block:Pagination}{block:PermalinkPagination}<!-- post pagination -->
+
+<div class="pagination">
+    <a class="prev" {block:PreviousPost} href="{PreviousPost}" {/block:PreviousPost}>{lang:Previous post}</a>
+    <a class="next" {block:NextPost} href="{NextPost}" {/block:NextPost}>{lang:Next post}</a>
+</div>{/block:PermalinkPagination}
+
+</section>
+
+<!-- theme credit (please don't remove!!! thank u) -->
+
+<a class="theme-credit1" href="https://rachaelthemes.tumblr.com/" target="_blank" title="Themes by Rachael"><svg xmlns:svgjs="http://svgjs.com/svgjs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g transform="matrix(1,0,0,1,40,0)"><path class="fill" d="M441.9,188c-2.5-9.5-22-9.2-29.6-10.8c-11.7-2.6-23.4-5.2-35.1-7.2c-28.3-5-57.5-7.6-86-2.8   c2.1-26.9-2.7-53.9-9.8-79.7c-5.9-21.3-17.4-42.9-20.8-64.6c-0.1-0.6-0.3-2.1-0.8-2.5c-0.9-1.8-2.7-3.8-4.8-4.6   c-1-0.5-3.4-1-4.7-0.7c-0.9,0.1-2.2,0.4-3,0.8c-0.4,0.2-0.8,0.4-1.2,0.7c-1.1,0.7-2.1,1.7-2.8,2.8c-0.3,0.4-0.5,0.8-0.7,1.3   c-5.2,10.9-19.6,18.9-29.3,25.1c-12.1,7.6-23.9,14.4-34.3,24.5c-18.4,17.9-31.1,41.1-37.2,65.9C53.9,133.6-4.2,232.5,42,307.8   C-2.4,357.4,7,436.7,60.9,475.2c53.6,38.3,131.2,21.3,164-35.8c44.7,26.4,103.1,16.8,139-20.1c34.7-35.6,41.6-91.3,16-134.1   c16.5-15.1,26.2-33,35.5-52.9c4.1-8.8,8.6-17.7,14.3-25.5C433.8,201.2,443.9,196,441.9,188C440.8,184,442.9,192,441.9,188   C439.4,178.6,442.9,192,441.9,188z M210.4,69c8.3-4.5,16.2-9.5,23.9-15l-10.9,45.2c-2.8,11.7,15.5,16.2,18.3,4.4L252.5,59   c10.3,29.4,24.2,73.2,19.2,112.7c-5,1.5-9.8,3.4-14.6,5.5c-0.1,0-0.2,0.1-0.2,0.1c-0.5,0.2-1,0.5-1.5,0.7   c-6.5,2.9-14.9,7.1-20,12.2c-4.5-7.4-9.8-14.5-15.9-20.6c-6.3-6.9-14.6-13.6-22.9-18c-0.5-0.3-1-0.6-1.6-0.9h0   c-10.6-6.2-22.4-10.6-34.5-13C166.6,115.6,180.1,88.3,210.4,69C212.2,68,180.1,88.3,210.4,69z M75.4,178.6   c36.2-32.5,95-31.5,129.5,3c0.1,0.1,0.2,0.2,0.3,0.3c0.8,0.8,1.5,1.5,2.2,2.3c3.6,3.7,6.9,7.8,9.7,12.1c2.7,3.9,5,8.2,7.1,12.5   c0,0,0,0,0,0c5.1,10.9,8.1,22.6,8.7,34.7l0,0.1c0.1,0.9,0.1,1.7,0.1,2.6v0.3c0.1,1.5,0,3.1,0,4.7v0.1c0,0.1,0,0.2,0,0.3   c0,0.2,0,0.3,0,0.5v0.1c0,0.1,0,0.2,0,0.3c-0.4,10.2-2,20.8-6.2,30.1c-0.3,0.7-0.6,1.4-0.8,2.1c-0.8,1.9-1.7,3.7-2.5,5.5   c0,0.1-0.1,0.1-0.1,0.2c-2.8,5.7-6.2,11.3-10.2,16.3c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1,0.1-0.2,0.2-0.3,0.3c-0.3,0.3-0.5,0.7-0.8,1   l0,0c0,0,0,0,0,0.1c0,0,0,0,0,0C172.7,264.2,102.3,258,56,294.6c0,0,0,0,0,0C35.3,257,42.9,207.9,75.4,178.6   C92.1,163.7,42.9,207.9,75.4,178.6C111.6,146.1,42.9,207.9,75.4,178.6z M220.9,388.5c-0.4,7.7-1.9,15.6-4.2,23   c-0.4,1.6-1.1,3.2-1.6,4.7l0,0c-0.2,0.4-0.3,0.9-0.5,1.3c-0.2,0.4-0.3,0.8-0.5,1.3c-0.2,0.5-0.4,1-0.6,1.5c-0.2,0.5-0.4,1-0.7,1.6   l0,0c0,0,0,0.1,0,0.1c-27.1,59.7-108.6,73.6-154,26.5c-49.8-51.6-23.7-141.2,46.6-157.3c36.7-8.5,76.6,6.3,98.3,37.2c0,0,0,0,0,0.1   l0,0c0,0,0,0,0,0C216,345.9,222.1,367.2,220.9,388.5C220.9,388.9,221,386.7,220.9,388.5z M362.1,391.8c-27.5,41.9-86,57-129.1,30.4   c2.1-5.7,4.1-12,5-18.1c0.6-2.8,1-5.6,1.3-8.5c0-0.1,0-0.2,0-0.3c0.4-3.3,0.2-6.7,0.6-10c1.1-21.2-5.5-43.5-16.6-61.4   c0.5-0.6,1.1-1.3,1.6-1.9c0.4-0.5,0.9-1,1.3-1.5l0.1-0.1c0,0,0-0.1,0.1-0.1c0.4-0.5,0.8-0.9,1.1-1.4c0,0,0,0,0,0   c7.6-8.9,13.6-20,17.5-31.1c4-9.9,6.4-22,6.9-34.8c0-0.1,0-0.2,0-0.3v-0.1h0C332.8,225.2,409.7,318.9,362.1,391.8   C352.9,405.8,371.7,377,362.1,391.8z M403.3,214.3c-5.5,10.5-9.3,20-10.1,21.9c-6,12.6-14.1,23.7-23.9,33.1   c-28.5-34.1-75.8-48.6-118.5-36.2c-1.2-8.9-3.5-17.5-6.8-25.8v0c2.2-1.8,4.5-3.6,6.9-5.2c0.9-0.6,1.9-1.2,2.8-1.8   c2.9-1.9,6.1-3.9,9.4-5.2c2.5-1.2,5.1-2.4,7.8-3.3c2.8-1.2,5.8-2.1,8.8-2.9c45.1-11.3,89.7-1.7,134.1,7.8   C410.3,201.6,406.9,207.4,403.3,214.3C397.8,224.8,406.9,207.4,403.3,214.3z"/><path class="fill" d="M225.5,147.6c-5.2,0-9.4-4.2-9.4-9.4s4.2-9.4,9.4-9.4h0c5.2,0,9.4,4.2,9.4,9.4S230.7,147.6,225.5,147.6z"/></g></svg></a>
+
+<a class="theme-credit2" href="https://rachaelthemes.tumblr.com/" target="_blank">Theme</a>
+
+</main></body>
+    
+</html>
