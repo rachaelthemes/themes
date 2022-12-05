@@ -160,7 +160,7 @@ CREDITS
     <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
     {NewPostStyles}
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/Eporme4ae/chirp.css">
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/Jwkrmebtp/chirp.css">
 <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/XYyrme1uj/chirp-photoset.min.css">
 
 <!-- font awesome -->
@@ -321,6 +321,10 @@ section#posts[aria-busy="true"]::after {
     }
     a.f-link {
         display: none !important;
+    }
+    a.share-button,
+    .not-note-count {
+        display: none;
     }
 }
 
@@ -489,7 +493,7 @@ section#posts[aria-busy="true"]::after {
 <div class="post-footer">
     <div class="footer-left"><a href="{Permalink}">
         <i class="fak fa-chirp-reply"></i>
-        {block:NoteCount}<span class="note-count">{NoteCount}</span>&nbsp;&nbsp;·&nbsp;&nbsp;{/block:NoteCount}{TimeAgo}
+        {block:NoteCount}<span class="note-count">{NoteCount}</span><span class="not-note-count">&nbsp;&nbsp;·&nbsp;&nbsp;</span>{/block:NoteCount}<span class="not-note-count">{TimeAgo}</span>
     </a></div>
     <div class="footer-right"><a class="reblog-button" href="{ReblogURL}">
         <i class="fak fa-chirp-retweet"></i>
@@ -497,7 +501,7 @@ section#posts[aria-busy="true"]::after {
     <a class="like-button">
         {LikeButton}
     </a>
-    <a href="https://www.tumblr.com/{Name}/{PostID}">
+    <a href="https://www.tumblr.com/{Name}/{PostID}" class="share-button">
         <i class="fak fa-chirp-share"></i>
     </a></div>
 </div>{/block:Date}
