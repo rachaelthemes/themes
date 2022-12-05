@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+{block:Options}<!-- tumblr variables -->
+<!-- image options -->
+<meta name="image:Header" content=""/>
+<meta name="image:Avatar" content=""/>
+<meta name="image:Sidebar" content=""/>
+<meta name="image:Favicon" content="https://static.tumblr.com/zgb0z1w/qtkrkw2ej/twitter.png"/>
+<!-- color options -->
+<meta name="color:Accent" content="#1c9cef"/>
+<!-- color scheme selection -->
+<meta name="select:Color Scheme" content="default" title="Default"/>
+<meta name="select:Color Scheme" content="dim" title="Dim"/>
+<meta name="select:Color Scheme" content="lights" title="Lights Out"/>
+<meta name="select:Color Scheme" content="tumblr" title="Tumblr (Blue)"/>
+<meta name="select:Color Scheme" content="dark" title="Tumblr (Dark)"/>
+<meta name="select:Color Scheme" content="accent" title="Accent (Light)"/>
+<meta name="select:Color Scheme" content="accent2" title="Accent (Dark)"/>
+<!--body font options-->
+<meta name="select:Font" content="Chirp" title="Twitter (Chirp)">
+<meta name="select:Font" content="Favorit" title="Tumblr (Favorit)">
+<meta name="select:Font" content="Helvetica Neue" title="System Default">
+<meta name="select:Font" content="Archivo" title="Archivo">
+<meta name="select:Font" content="Arvo" title="Arvo">
+<meta name="select:Font" content="Barlow" title="Barlow">
+<meta name="select:Font" content="Comfortaa" title="Comfortaa">
+<meta name="select:Font" content="Courier Prime" title="Courier Prime">
+<meta name="select:Font" content="Fira Sans" title="Fira Sans">
+<meta name="select:Font" content="Heebo" title="Heebo">
+<meta name="select:Font" content="IBM Plex Mono" title="IBM Plex Mono">
+<meta name="select:Font" content="IBM Plex Sans" title="IBM Plex Sans">
+<meta name="select:Font" content="Inconsolata" title="Inconsolata">
+<meta name="select:Font" content="Inria Serif" title="Inria Serif">
+<meta name="select:Font" content="K2D" title="K2D">
+<meta name="select:Font" content="Karla" title="Karla">
+<meta name="select:Font" content="Lato" title="Lato">
+<meta name="select:Font" content="Lora" title="Lora">
+<meta name="select:Font" content="Mali" title="Mali">
+<meta name="select:Font" content="Muli" title="Muli">
+<meta name="select:Font" content="Noto Sans" title="Noto Sans">
+<meta name="select:Font" content="Nunito" title="Nunito">
+<meta name="select:Font" content="Open Sans" title="Open Sans">
+<meta name="select:Font" content="Overpass" title="Overpass">
+<meta name="select:Font" content="Poppins" title="Poppins">
+<meta name="select:Font" content="PT Sans" title="PT Sans">
+<meta name="select:Font" content="Quicksand" title="Quicksand">
+<meta name="select:Font" content="Roboto" title="Roboto">
+<meta name="select:Font" content="Roboto Mono" title="Roboto Mono">
+<meta name="select:Font" content="Roboto Slab" title="Roboto Slab">
+<meta name="select:Font" content="Rubik" title="Rubik">
+<meta name="select:Font" content="Solway" title="Solway">
+<meta name="select:Font" content="Source Code Pro" title="Source Code Pro">
+<meta name="select:Font" content="Source Sans Pro" title="Source Sans Pro">
+<meta name="select:Font" content="Space Mono" title="Space Mono">
+<meta name="select:Font" content="Work Sans" title="Work Sans">
+<!-- font size -->
+<meta name="select:Font Size" content="15px" title="15px (Default)">
+<meta name="select:Font Size" content="14px" title="14px">
+<meta name="select:Font Size" content="16px" title="16px">
+<meta name="select:Font Size" content="18px" title="18px">
+<!-- sidebar width -->
+<meta name="select:Nav Width" content="275px" title="275px (Default)">
+<meta name="select:Nav Width" content="200px" title="200px">
+<meta name="select:Nav Width" content="225px" title="225px">
+<meta name="select:Nav Width" content="250px" title="250px">
+<meta name="select:Nav Width" content="300px" title="300px">
+<meta name="select:Nav Width" content="325px" title="325px">
+<meta name="select:Nav Width" content="350px" title="350px">
+<meta name="select:Nav Width" content="90px" title="Icons Only">
+<!-- post width -->
+<meta name="select:Post Size" content="600px" title="600px (Default)">
+<meta name="select:Post Size" content="400px" title="400px">
+<meta name="select:Post Size" content="450px" title="450px">
+<meta name="select:Post Size" content="500px" title="500px">
+<meta name="select:Post Size" content="540px" title="540px">
+<meta name="select:Post Size" content="650px" title="650px">
+<meta name="select:Post Size" content="700px" title="700px">
+<!-- sidebar width -->
+<meta name="select:Sidebar Width" content="350px" title="350px (Default)">
+<meta name="select:Sidebar Width" content="250px" title="250px">
+<meta name="select:Sidebar Width" content="275px" title="275px">
+<meta name="select:Sidebar Width" content="300px" title="300px">
+<meta name="select:Sidebar Width" content="325px" title="325px">
+<meta name="select:Sidebar Width" content="375px" title="375px">
+<meta name="select:Sidebar Width" content="400px" title="400px">
+<!-- border radius -->
+<meta name="select:Border Radius" content="10px" title="10px (Default)">
+<meta name="select:Border Radius" content="4px" title="4px">
+<meta name="select:Border Radius" content="8px" title="8px">
+<meta name="select:Border Radius" content="16px" title="16px">
+<!-- page link icon selection. this is so long I know I'm sorry -->
+<meta name="select:Page Link 1 Icon" content='link' title="Default"><meta name="select:Page Link 1 Icon" content='analytics' title="Analytics"><meta name="select:Page Link 1 Icon" content='at' title="At"><meta name="select:Page Link 1 Icon" content='bookmark' title="Bookmark"><meta name="select:Page Link 1 Icon" content='calendar' title="Calendar"><meta name="select:Page Link 1 Icon" content='camera' title="Camera"><meta name="select:Page Link 1 Icon" content='embed' title="Code"><meta name="select:Page Link 1 Icon" content='explore' title="Explore"><meta name="select:Page Link 1 Icon" content='external' title="External"><meta name="select:Page Link 1 Icon" content='flag' title="Flag"><meta name="select:Page Link 1 Icon" content='flame' title="Flame"><meta name="select:Page Link 1 Icon" content='globe' title="Globe"><meta name="select:Page Link 1 Icon" content='like' title="Heart"><meta name="select:Page Link 1 Icon" content='help' title="Help"><meta name="select:Page Link 1 Icon" content='image' title="Image"><meta name="select:Page Link 1 Icon" content='info' title="Info"><meta name="select:Page Link 1 Icon" content='list' title="List"><meta name="select:Page Link 1 Icon" content='moment' title="Moment"><meta name="select:Page Link 1 Icon" content='more' title="More"><meta name="select:Page Link 1 Icon" content='newsletter' title="Newsletter"><meta name="select:Page Link 1 Icon" content='notification' title="Notification"><meta name="select:Page Link 1 Icon" content='display' title="Paint"><meta name="select:Page Link 1 Icon" content='profile' title="Profile"><meta name="select:Page Link 1 Icon" content='rocket' title="Rocket"><meta name="select:Page Link 1 Icon" content='setting' title="Setting"><meta name="select:Page Link 1 Icon" content='share' title="Share"><meta name="select:Page Link 1 Icon" content='smile' title="Smile"><meta name="select:Page Link 1 Icon" content='space' title="Space"><meta name="select:Page Link 1 Icon" content='sparkle' title="Sparkle"><meta name="select:Page Link 1 Icon" content='star' title="Star"><meta name="select:Page Link 1 Icon" content='topic' title="Topic"><meta name="select:Page Link 1 Icon" content='trash' title="Trash"><meta name="select:Page Link 1 Icon" content='video' title="Video">
+<meta name="select:Page Link 2 Icon" content='link' title="Default"><meta name="select:Page Link 2 Icon" content='analytics' title="Analytics"><meta name="select:Page Link 2 Icon" content='at' title="At"><meta name="select:Page Link 2 Icon" content='bookmark' title="Bookmark"><meta name="select:Page Link 2 Icon" content='calendar' title="Calendar"><meta name="select:Page Link 2 Icon" content='camera' title="Camera"><meta name="select:Page Link 2 Icon" content='embed' title="Code"><meta name="select:Page Link 2 Icon" content='explore' title="Explore"><meta name="select:Page Link 2 Icon" content='external' title="External"><meta name="select:Page Link 2 Icon" content='flag' title="Flag"><meta name="select:Page Link 2 Icon" content='flame' title="Flame"><meta name="select:Page Link 2 Icon" content='globe' title="Globe"><meta name="select:Page Link 2 Icon" content='like' title="Heart"><meta name="select:Page Link 2 Icon" content='help' title="Help"><meta name="select:Page Link 2 Icon" content='image' title="Image"><meta name="select:Page Link 2 Icon" content='info' title="Info"><meta name="select:Page Link 2 Icon" content='list' title="List"><meta name="select:Page Link 2 Icon" content='moment' title="Moment"><meta name="select:Page Link 2 Icon" content='more' title="More"><meta name="select:Page Link 2 Icon" content='newsletter' title="Newsletter"><meta name="select:Page Link 2 Icon" content='notification' title="Notification"><meta name="select:Page Link 2 Icon" content='display' title="Paint"><meta name="select:Page Link 2 Icon" content='profile' title="Profile"><meta name="select:Page Link 2 Icon" content='rocket' title="Rocket"><meta name="select:Page Link 2 Icon" content='setting' title="Setting"><meta name="select:Page Link 2 Icon" content='share' title="Share"><meta name="select:Page Link 2 Icon" content='smile' title="Smile"><meta name="select:Page Link 2 Icon" content='space' title="Space"><meta name="select:Page Link 2 Icon" content='sparkle' title="Sparkle"><meta name="select:Page Link 2 Icon" content='star' title="Star"><meta name="select:Page Link 2 Icon" content='topic' title="Topic"><meta name="select:Page Link 2 Icon" content='trash' title="Trash"><meta name="select:Page Link 2 Icon" content='video' title="Video">
+<meta name="select:Page Link 3 Icon" content='link' title="Default"><meta name="select:Page Link 3 Icon" content='analytics' title="Analytics"><meta name="select:Page Link 3 Icon" content='at' title="At"><meta name="select:Page Link 3 Icon" content='bookmark' title="Bookmark"><meta name="select:Page Link 3 Icon" content='calendar' title="Calendar"><meta name="select:Page Link 3 Icon" content='camera' title="Camera"><meta name="select:Page Link 3 Icon" content='embed' title="Code"><meta name="select:Page Link 3 Icon" content='explore' title="Explore"><meta name="select:Page Link 3 Icon" content='external' title="External"><meta name="select:Page Link 3 Icon" content='flag' title="Flag"><meta name="select:Page Link 3 Icon" content='flame' title="Flame"><meta name="select:Page Link 3 Icon" content='globe' title="Globe"><meta name="select:Page Link 3 Icon" content='like' title="Heart"><meta name="select:Page Link 3 Icon" content='help' title="Help"><meta name="select:Page Link 3 Icon" content='image' title="Image"><meta name="select:Page Link 3 Icon" content='info' title="Info"><meta name="select:Page Link 3 Icon" content='list' title="List"><meta name="select:Page Link 3 Icon" content='moment' title="Moment"><meta name="select:Page Link 3 Icon" content='more' title="More"><meta name="select:Page Link 3 Icon" content='newsletter' title="Newsletter"><meta name="select:Page Link 3 Icon" content='notification' title="Notification"><meta name="select:Page Link 3 Icon" content='display' title="Paint"><meta name="select:Page Link 3 Icon" content='profile' title="Profile"><meta name="select:Page Link 3 Icon" content='rocket' title="Rocket"><meta name="select:Page Link 3 Icon" content='setting' title="Setting"><meta name="select:Page Link 3 Icon" content='share' title="Share"><meta name="select:Page Link 3 Icon" content='smile' title="Smile"><meta name="select:Page Link 3 Icon" content='space' title="Space"><meta name="select:Page Link 3 Icon" content='sparkle' title="Sparkle"><meta name="select:Page Link 3 Icon" content='star' title="Star"><meta name="select:Page Link 3 Icon" content='topic' title="Topic"><meta name="select:Page Link 3 Icon" content='trash' title="Trash"><meta name="select:Page Link 3 Icon" content='video' title="Video">
+<meta name="select:Page Link 4 Icon" content='link' title="Default"><meta name="select:Page Link 4 Icon" content='analytics' title="Analytics"><meta name="select:Page Link 4 Icon" content='at' title="At"><meta name="select:Page Link 4 Icon" content='bookmark' title="Bookmark"><meta name="select:Page Link 4 Icon" content='calendar' title="Calendar"><meta name="select:Page Link 4 Icon" content='camera' title="Camera"><meta name="select:Page Link 4 Icon" content='embed' title="Code"><meta name="select:Page Link 4 Icon" content='explore' title="Explore"><meta name="select:Page Link 4 Icon" content='external' title="External"><meta name="select:Page Link 4 Icon" content='flag' title="Flag"><meta name="select:Page Link 4 Icon" content='flame' title="Flame"><meta name="select:Page Link 4 Icon" content='globe' title="Globe"><meta name="select:Page Link 4 Icon" content='like' title="Heart"><meta name="select:Page Link 4 Icon" content='help' title="Help"><meta name="select:Page Link 4 Icon" content='image' title="Image"><meta name="select:Page Link 4 Icon" content='info' title="Info"><meta name="select:Page Link 4 Icon" content='list' title="List"><meta name="select:Page Link 4 Icon" content='moment' title="Moment"><meta name="select:Page Link 4 Icon" content='more' title="More"><meta name="select:Page Link 4 Icon" content='newsletter' title="Newsletter"><meta name="select:Page Link 4 Icon" content='notification' title="Notification"><meta name="select:Page Link 4 Icon" content='display' title="Paint"><meta name="select:Page Link 4 Icon" content='profile' title="Profile"><meta name="select:Page Link 4 Icon" content='rocket' title="Rocket"><meta name="select:Page Link 4 Icon" content='setting' title="Setting"><meta name="select:Page Link 4 Icon" content='share' title="Share"><meta name="select:Page Link 4 Icon" content='smile' title="Smile"><meta name="select:Page Link 4 Icon" content='space' title="Space"><meta name="select:Page Link 4 Icon" content='sparkle' title="Sparkle"><meta name="select:Page Link 4 Icon" content='star' title="Star"><meta name="select:Page Link 4 Icon" content='topic' title="Topic"><meta name="select:Page Link 4 Icon" content='trash' title="Trash"><meta name="select:Page Link 4 Icon" content='video' title="Video">
+<meta name="select:Page Link 5 Icon" content='link' title="Default"><meta name="select:Page Link 5 Icon" content='analytics' title="Analytics"><meta name="select:Page Link 5 Icon" content='at' title="At"><meta name="select:Page Link 5 Icon" content='bookmark' title="Bookmark"><meta name="select:Page Link 5 Icon" content='calendar' title="Calendar"><meta name="select:Page Link 5 Icon" content='camera' title="Camera"><meta name="select:Page Link 5 Icon" content='embed' title="Code"><meta name="select:Page Link 5 Icon" content='explore' title="Explore"><meta name="select:Page Link 5 Icon" content='external' title="External"><meta name="select:Page Link 5 Icon" content='flag' title="Flag"><meta name="select:Page Link 5 Icon" content='flame' title="Flame"><meta name="select:Page Link 5 Icon" content='globe' title="Globe"><meta name="select:Page Link 5 Icon" content='like' title="Heart"><meta name="select:Page Link 5 Icon" content='help' title="Help"><meta name="select:Page Link 5 Icon" content='image' title="Image"><meta name="select:Page Link 5 Icon" content='info' title="Info"><meta name="select:Page Link 5 Icon" content='list' title="List"><meta name="select:Page Link 5 Icon" content='moment' title="Moment"><meta name="select:Page Link 5 Icon" content='more' title="More"><meta name="select:Page Link 5 Icon" content='newsletter' title="Newsletter"><meta name="select:Page Link 5 Icon" content='notification' title="Notification"><meta name="select:Page Link 5 Icon" content='display' title="Paint"><meta name="select:Page Link 5 Icon" content='profile' title="Profile"><meta name="select:Page Link 5 Icon" content='rocket' title="Rocket"><meta name="select:Page Link 5 Icon" content='setting' title="Setting"><meta name="select:Page Link 5 Icon" content='share' title="Share"><meta name="select:Page Link 5 Icon" content='smile' title="Smile"><meta name="select:Page Link 5 Icon" content='space' title="Space"><meta name="select:Page Link 5 Icon" content='sparkle' title="Sparkle"><meta name="select:Page Link 5 Icon" content='star' title="Star"><meta name="select:Page Link 5 Icon" content='topic' title="Topic"><meta name="select:Page Link 5 Icon" content='trash' title="Trash"><meta name="select:Page Link 5 Icon" content='video' title="Video">
+<!-- boolean options -->
+<meta name="if:Endless Scroll" content="0"/>
+<meta name="if:Verified Account" content="0"/>
+<!-- text options -->
+<meta name="text:Name" content="Name"/>
+<meta name="text:Description" content="Description"/>
+<meta name="text:Bio Location" content=""/>
+<meta name="text:Bio Link" content=""/>
+<meta name="text:Bio Birthday" content=""/>
+<meta name="text:Bio Pronouns" content=""/>
+<meta name="text:Home Link Title" content="Home"/>
+<meta name="text:Ask Link Title" content="Ask"/>
+<meta name="text:Submit Link Title" content="Submit"/>
+<!-- relevant accounts header on permalink pages -->
+<meta name="text:Related Accounts Title" content="Relevant people"/>
+<!-- what's happening / updates -->
+<meta name="text:Updates Title" content="What's happening"/>
+<meta name="text:Updates Description" content="Extra box for whatever you want! Delete the text here and the box will go away."/>
+<!-- suggested accounts header on permalink pages -->
+<meta name="text:Suggested Accounts Title" content="Who to follow"/>
+<meta name="text:Accounts separated by commas" content="staff, changes"/>
+<!-- trending tags -->
+<meta name="text:Trending Tags Title" content="Trending tags"/>
+<meta name="text:Tags separated by commas" content="dogs, cats, videos"/>
+
+<!-- end tumblr variables -->{/block:Options}
+<html lang="{block:English}en-US{/block:English}{block:German}de-DE{/block:German}{block:French}fr-FR{/block:French}{block:Italian}it-IT{/block:Italian}{block:Japanese}ja-JP{/block:Japanese}{block:Turkish}tr-TR{/block:Turkish}{block:Spanish}es-ES{/block:Spanish}{block:Russian}ru-RU{/block:Russian}{block:Polish}pl-PL{/block:Polish}{block:PortuguesePT}pt-PT{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl-NL{/block:Dutch}{block:Indonesian}id-ID{/block:Indonesian}{block:Hindi}hi-IN{/block:Hindi}{block:Korean}ko-KR{/block:Korean}{block:ChineseSimplified}zh-CN{/block:ChineseSimplified}{block:ChineseTraditional}zh-TW{/block:ChineseTraditional}{block:ChineseHK}zh-HK{/block:ChineseHK}">
+
+<!--
+
+TUMBLR THEME: Chirp | © Rachael (@rachaelthemes)
+Inspired by Twitter
+
+I am not affiliated with Twitter, nor do I claim to own any Twitter assets used in this theme.
+
+    Version 2.0.0 | updated December 4th, 2022
+
+For theme information, help, FAQs, and more:
+    https://rachaelthemes.com/chirp
+
+By using this theme, you agree to these terms and conditions:
+    https://rachaelthemes.com/terms
+
+
+CREDITS
+
+ – Chirp font, iconography, and design inspiration from Twitter
+ – Favorit font by Tumblr
+ – customFont.js and tumblrControls.js by @rachaelthemes
+ – Resize Videos by @shythemes
+ – customaudio.js by @annasthms
+ – photosets.css by @annasthms and @eggdesign
+ 
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="{MetaDescription}" name="description">
+    <title>{block:ifName}{text:Name} (@{Name}){/block:ifName}{block:ifNotName}{Title} (@{Name}){/block:ifNotName}</title>
+    <meta content="website" property="og:type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="shortcut icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
+    <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
+    {NewPostStyles}
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/Eporme4ae/chirp.css">
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/XYyrme1uj/chirp-photoset.min.css">
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/d10173a287.js" crossorigin="anonymous"></script>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://static.tumblr.com/zgb0z1w/2Zirme12s/chirp.min.js"></script>{block:ifEndlessScroll}{block:IndexPage}
+<script src="https://static.tumblr.com/zgb0z1w/Pmurme12e/chirp-endless.min.js" type="module"></script>{/block:IndexPage}{/block:ifEndlessScroll}
+
+<script type="text/javascript">$(document).ready(function(){customFonts("{select:Font}");var c="{select:Color Scheme}";var s,t;if(c=="dim"){s="#15202c";t="#f7f9f9";}else if(c=="lights"){s="#000000";t="#e7e9ea";}else if(c=="tumblr"){s="#061a34";t="#ffffff";}else if(c=="dark"){s="#000000";t="#ffffff";}else if(c=="accent"){s="{color:Accent}";t="#ffffff";}else if(c=="accent2"){s="{color:Accent}";t="#000000";}else{s="#ffffff";t="#71767b";};tumblrControls(s,t,"{Name}"{block:Posts}{block:PermalinkPage}{block:Date},"{PostID}","{RelativePermalink}","true"{/block:Date}{/block:PermalinkPage}{/block:Posts});{block:ifAccountsSeparatedByCommas}pullAccounts("{text:Accounts Separated By Commas}");{/block:ifAccountsSeparatedByCommas}{block:ifTagsSeparatedByCommas}pullTags("{text:Tags separated by commas}","{Name}");{/block:ifTagsSeparatedByCommas}$(".shorten-link").show();noteCount();postCount("{Name}");});</script>
+
+<style type="text/css">
+
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    --ft: {select:Font}, apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* body font */
+    --fsz: {select:Font Size}; /* font size */
+    --nw: {select:Nav Width};  /* navigation width */
+    --psz: {select:Post Size};  /* post width */
+    --sbw: {select:Sidebar Width};  /* sidebar width */
+    --act: {color:Accent}; /* accent color */
+    --brds: {select:Border Radius}; /* border radius */
+    /* BODY COLORS */
+    --bg: #ffffff; /* background color */
+    --bdr: #e8eced; /* border color */
+    --txt: #0f1419; /* text color */
+    --gray: #71767b; /* gray text color */
+    /* NAV COLORS */
+    --navh: rgba(83,100,113,.13); /* nav background hover */
+    /* SIDEBAR COLORS */
+    --sbg: #f7f9f9; /* sidebar background */
+    --sbgh: rgba(0,0,0,0.03); /* sidebar link background hover */
+    --sbdr: #e6ecf2; /* sidebar inner border color */
+    --sgray: #71767b; /* sidebar gray text color */
+    /* POST COLORS */
+    --pbg: #ffffff; /* post background color */
+    --pbg2: #f2f6f7; /* off-white post background */
+    --pbdr: #e8eced; /* post inner border color */
+    --ptxt: #0f1419; /* post text color */
+    --pgray: #71767b; /* post gray text color */
+}
+
+/* ---------- CODE THAT WON'T WORK IN THE CSS FILE ---------- */
+
+.header-image {
+    background-image: url('{image:Header}');
+}
+
+.header-avatar {
+    background-image: url('{image:Avatar}');
+}
+
+section#posts[aria-busy="true"]::after {
+    content: "{lang:Loading}...";
+}
+
+/* ---------- SCREEN SIZE RESPONSIVENESS ---------- */
+
+@media (max-width: calc({select:Sidebar Width} + {select:Post Size} + {select:Nav Width} + 62px)) { 
+    :root {
+        --nw: 90px;
+    }
+    nav .nav-inner a span {
+        max-width: none;
+        padding: 12px;
+    }
+    
+    nav .nav-inner a .link-icon {
+        margin-right: 0;
+    }
+    
+    nav .nav-inner .nav-link-title {
+        display: none;
+    }
+}
+
+@media (max-width: calc({select:Sidebar Width} + {select:Post Size} + 152px)) {
+    aside {
+        display: none;
+    }
+    main {
+        width: calc(var(--psz) + var(--nw) + 2px);
+}
+    iframe#new-tumblr-controls {
+        left: calc(50% - ((var(--psz) + var(--nw)) / 2));;
+        width: calc(var(--psz) + var(--nw) + 12px) !important;
+    }
+}
+
+@media (max-width: calc({select:Post Size} + 112px)) {
+    :root {
+        --nw: 60px;
+    }
+    .nav-inner {
+        padding-right: 0 !important;
+    }
+    main {
+        width: calc(100% - 10px);
+        padding-left: 10px;
+    }
+    section#posts {
+        width: calc(100% - 61px);
+        border-left: 1px var(--bdr) solid;
+        margin-top: 0;
+    }
+    header {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+    article.post {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+    iframe#new-tumblr-controls {
+        left: 10px;
+        width: calc(100% - 10px) !important;
+    }
+    body.tumblr header, body.tumblr article.post, 
+    body.accent header, body.accent article.post, 
+    body.accent2 header, body.accent2 article.post {
+        border-color: var(--pbdr);
+    }
+}
+
+@media (max-width: 540px) {
+    nav {
+        display: none;
+    }
+    main {
+        width:100%;
+        padding-left: 0;
+    }
+    section#posts {
+        width: 100%;
+        border-left: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .header-image {
+        height: 150px;
+    }
+    .header-avatar {
+        width: 83.5px;
+        height: 83.5px;
+        margin-top: -48px;
+    }
+    .header-right {
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+    a.f-link {
+        display: none !important;
+    }
+}
+
+/* ---------- CUSTOM CSS ---------- */
+
+{CustomCSS}
+
+/* ---------- END CSS ---------- */
+
+</style>
+
+</head>
+
+<body class="{select:Color Scheme}{block:ifEndlessScroll}{block:IndexPage} endless-scroll{/block:IndexPage}{/block:ifEndlessScroll}{block:AskPage} ask-page{/block:AskPage}{block:SubmitPage} submit-page{/block:SubmitPage}">
+
+<!-- tumblr iframe (replaced with jquery) -->
+
+<div class="iframe-container"><iframe id="new-tumblr-controls" src="" frameborder="0" scrolling="no" name="unified-controls" class="tmblr-iframe tmblr-iframe--unified-controls tmblr-iframe--loaded iframe-controls--desktop"></iframe></div>
+
+<main>
+
+<nav class="sticky n-{select:Nav Width}">
+    <div class="stick-inner nav-inner">
+        <a href="/" {block:Homepage}class="current-page"{/block:Homepage}><span><div class="link-icon"><i class="fak fa-chirp-home"></i></div><div class="nav-link-title">{block:ifHomeLinkTitle}{text:Home Link Title}{/block:ifHomeLinkTitle}{block:ifNotHomeLinkTitle}{lang:Home}{/block:ifNotHomeLinkTitle}</div></span></a>{block:AskEnabled}
+        <a href="/ask" {block:AskPage}class="current-page"{/block:AskPage}><span><div class="link-icon"><i class="fak fa-chirp-message"></i></div><div class="nav-link-title">{block:ifAskLinkTitle}{text:Ask Link Title}{/block:ifAskLinkTitle}{block:ifNotAskLinkTitle}Ask{/block:ifNotAskLinkTitle}</div></span></a>{/block:AskEnabled}{block:SubmissionsEnabled}
+        <a href="/submit" class="{block:SubmitPage}current-page{/block:SubmitPage}"><span><div class="link-icon"><i class="fak fa-chirp-submit"></i></div><div class="nav-link-title">{block:ifSubmitLinkTitle}{text:Submit Link Title}{/block:ifSubmitLinkTitle}{block:ifNotSubmitLinkTitle}Submit{/block:ifNotSubmitLinkTitle}</div></span></a>{/block:SubmissionsEnabled}{block:HasPages}<span class="page-links">{block:Pages}
+        <a href="{URL}" class="{CurrentState}"><span><div class="link-icon"><i class="fak pl-1 fa-chirp-{select:Page Link 1 Icon}"></i><i class="fak pl-2 fa-chirp-{select:Page Link 2 Icon}"></i><i class="fak pl-3 fa-chirp-{select:Page Link 3 Icon}"></i><i class="fak pl-4 fa-chirp-{select:Page Link 4 Icon}"></i><i class="fak pl-5 fa-chirp-{select:Page Link 5 Icon}"></i><i class="fak pl-6 fa-chirp-link"></i></div><div class="nav-link-title">{Label}</div></span></a>
+        {/block:Pages}</span>{/block:HasPages}
+    </div>
+</nav>
+
+<section id="posts"{block:ifEndlessScroll}{block:Pagination} role="feed"{/block:Pagination}{/block:ifEndlessScroll}>
+
+<header>
+    <div class="header-image"></div>
+    <div class="header-right">
+        <a href="https://www.tumblr.com/{Name}"><i class="fak fa-chirp-external"></i></a>
+        <a href="https://www.tumblr.com/message/{Name}"><i class="fak fa-chirp-message"></i></a>
+        <a class="f-link" href="https://www.tumblr.com/follow/{Name}">Follow</a>
+    </div>{block:ifAvatarImage}
+    <div class="header-avatar"></div>{/block:ifAvatarImage}
+    <div class="bio">{block:ifName}
+        <div class="bio-name">{text:Name}{block:ifVerifiedAccount}<i class="fak fa-chirp-verified"></i>{/block:ifVerifiedAccount}</div>{/block:ifName}
+        <div class="bio-url">@{Name}</div>{block:ifDescription}
+        <div class="bio-description">{text:Description}</div>{/block:ifDescription}
+        <div class="bio-points{block:ifNotBioLocation}{block:ifNotBioLink}{block:ifNotBioBirthday}{block:ifNotBioPronouns} no-points{/block:ifNotBioPronouns}{/block:ifNotBioBirthday}{/block:ifNotBioLink}{/block:ifNotBioLocation}">{block:ifBioLocation}
+        <span class="point p1">{text:Bio Location}</span>{/block:ifBioLocation}{block:ifBioLink}
+        <span class="point p2"><a class="shorten-link" href="{text:Bio Link}">{text:Bio Link}</a></span>{/block:ifBioLink}{block:ifBioBirthday}
+        <span class="point p3">{text:Bio Birthday}</span>{/block:ifBioBirthday}{block:ifBioPronouns}
+        <span class="point p4">{text:Bio Pronouns}</span>{/block:ifBioPronouns}
+        </div>
+    </div>
+</header>
+
+<div class="mobile-nav">
+    <a href="/">{block:ifHomeLinkTitle}{text:Home Link Title}{/block:ifHomeLinkTitle}{block:ifNotHomeLinkTitle}{lang:Home}{/block:ifNotHomeLinkTitle}</a>{block:AskEnabled}
+    <a href="/ask">{block:ifAskLinkTitle}{text:Ask Link Title}{/block:ifAskLinkTitle}{block:ifNotAskLinkTitle}Ask{/block:ifNotAskLinkTitle}</a>{/block:AskEnabled}{block:SubmissionsEnabled}
+    <a href="/submit">{block:ifSubmitLinkTitle}{text:Submit Link Title}{/block:ifSubmitLinkTitle}{block:ifNotSubmitLinkTitle}Submit{/block:ifNotSubmitLinkTitle}</a>{/block:SubmissionsEnabled}{block:HasPages}{block:Pages}
+    <a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
+</div>
+
+{block:SearchPage}{block:NoSearchResults}<article class="post alert"><h2 class="post-title">{lang:Sorry no search results found}.</h2></article>{/block:NoSearchResults}{/block:SearchPage}{block:NoPosts}<article class="post alert"><h2 class="post-title">{lang:This minimalist Tumblr has no posts}</h2></article>{/block:NoPosts}{block:Posts inlineMediaWidth="700"}
+
+<!-- POST{block:Date} ID {PostID}{/block:Date} -->
+
+<article {block:Date}id="{PostID}" {/block:Date}class="post post-{PostType}{block:Date} has-date{/block:Date}{block:Homepage}{block:PinnedPostLabel} pinned-post{/block:PinnedPostLabel}{/block:Homepage}">{block:RebloggedFrom}
+
+<!-- post header -->
+
+<div class="post-header ph"><span class="post-header-left"><i class="fak fa-chirp-retweet-alt"></i></span><a href="{ReblogParentURL}">{ReblogParentName}</a>
+</div>{/block:RebloggedFrom}{block:Homepage}{block:PinnedPostLabel}
+
+<!-- pinned post header -->
+
+<div class="post-header">
+    <span class="post-header-left"><i class="fak fa-chirp-pinned"></i></span><a>Pinned Post</a>
+</div>{/block:PinnedPostLabel}{/block:Homepage}
+
+<!-- post content -->
+
+{block:Text}{block:Title}<h2 class="post-title">
+    <a {block:IndexPage}href="{Permalink}"{/block:IndexPage}>{Title}</a>
+</h2>{/block:Title}{/block:Text}{block:Photo}<div class="image-container">
+    <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+        <img src="{PhotoURL-HighRes}" {block:HighRes}class="high-res"{/block:HighRes} alt="{PhotoAlt}" />
+    </a>
+</div>{/block:Photo}{block:Panorama}{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}{/block:Panorama}{block:Photoset}<div class="photoset-grid" photoset-layout="{PhotosetLayout}">
+    {block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)">
+        <img src="{PhotoURL-HighRes}" />
+    </div>{/block:Photos}
+</div>{/block:Photoset}{block:Quote}<div class="quote {Length}">{Quote}</div>
+{block:Source}<div class="quote-source">{Source}</div>{/block:Source}{/block:Quote}{block:Link}<div class="link-container {block:Thumbnail}thumb{/block:Thumbnail}">
+    <a {Target} href="{URL}" class="link">{block:Thumbnail}
+        <div class="link-thumbnail">
+            <img src="{Thumbnail-HighRes}" alt="" />
+        </div>{/block:Thumbnail}
+        <div class="link-text-wrapper clearfix">
+            <div class="link-text">{block:Host}
+                <div class="link-host">{Host}</div>{/block:Host}
+                <h2 class="link-title">{Name}</h2>{block:Excerpt}
+                <div class="link-excerpt">{Excerpt}</div>{/block:Excerpt}{block:Author}
+                <div class="link-author">{Author}</div>{/block:Author}
+            </div>
+        </div>
+    </a>
+</div>{/block:Link}{block:Chat}{block:Title}<h2 class="post-title">
+        <a href="{Permalink}">{Title}</a>
+    </h2>{/block:Title}
+    <div class="chat">{block:Lines}
+        <div class="chat-line">{block:Label}<span class="chat-label">{Label}</span>{/block:Label} {Line}</div>
+    {/block:Lines}</div>
+{/block:Chat}{block:Audio}{block:AudioPlayer}{AudioPlayer}
+<div class="audio_player {block:AlbumArt}album_art{/block:AlbumArt}">
+    <div class="seek-art">
+	    {audio:Seekbar}
+	    {block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
+    </div>
+	{audio:AudioButtons}
+	<div class="audio_info">
+	{block:TrackName}<div><b>{TrackName}</b></div>{/block:TrackName}
+	{block:Artist}<div>{Artist}</div>{/block:Artist}
+	</div>
+</div>{/block:AudioPlayer}{/block:Audio}{block:Video}<div class="video">{Video-500}</div>{/block:Video}{block:Answer}<div id="question">
+    <img class="ask-avatar" src="{AskerPortraitURL-96}">
+    <div class="ask-content">
+        <p class="asker"><strong>{Asker}</strong> asked:</p>
+        <p class="ask-body">{Question}</p>
+    </div>
+</div>{block:Answerer}
+<div id="answer">
+    <img class="ask-avatar" src="{AnswererPortraitURL-96}">
+    <div class="ask-content">
+        <p class="asker"><strong>{Answerer}</strong> answered:</p>
+        <div class="ask-body">{Answer}</div>
+    </div>
+</div>{/block:Answerer}{/block:Answer}
+
+{block:NotReblog}<!-- original post content -->
+
+{block:AskPage}{block:ifAskBoxText}<div class="ask-box-text">{text:Ask Box Text}</div>{/block:ifAskBoxText}{/block:AskPage}<div class="post-caption">
+    {block:Text}{Body}{/block:Text}{block:Photo}{block:Caption}{Caption}{/block:Caption}{/block:Photo}{block:Panorama}{block:Caption}{Caption}{/block:Caption}{/block:Panorama}{block:Photoset}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}{block:Link}{block:Description}{Description}{/block:Description}{/block:Link}{block:Audio}{block:Caption}{Caption}{/block:Caption}{/block:Audio}{block:Video}{block:Caption}{Caption}{/block:Caption}{/block:Video}{block:Answer}{Replies}{/block:Answer}
+</div>{/block:NotReblog}{block:RebloggedFrom}<!-- reblog chains -->
+
+<div class="post-reblog-list">
+    {block:Reblogs}<div class="post-reblog-item">
+        <div class="post-reblog-header">
+            <div class="reblog-item-avatar">{block:IsActive}
+                <a target="_blank" href="{Permalink}"><img src="{PortraitURL-64}" alt="{Username}"></a>{/block:IsActive}{block:IsDeactivated}
+                <span class="deactivated"><img src="{PortraitURL-64}" alt="{Username}"></span>{/block:IsDeactivated}
+            </div>
+            <div class="reblog-item-username">{block:IsActive}
+                <a target="_blank" class="post-tumblelog-name" href="{Permalink}">{Username}</a>{/block:IsActive}{block:IsDeactivated}
+                <span class="deactivated">{Username}</span>{/block:IsDeactivated}
+            </div>
+        </div>
+        {Body}
+    </div>{/block:Reblogs}
+</div>{/block:RebloggedFrom}{block:Date}
+
+<!-- post footer -->
+
+{block:HasTags}<div class="post-tags">{block:Tags}
+    <a class="post-tag" href="{TagURL}">#{Tag}</a>{/block:Tags}
+</div>{/block:HasTags}
+
+<div class="post-footer">
+    <div class="footer-left"><a href="{Permalink}">
+        <i class="fak fa-chirp-reply"></i>
+        {block:NoteCount}<span class="note-count">{NoteCount}</span>&nbsp;&nbsp;·&nbsp;&nbsp;{/block:NoteCount}{TimeAgo}
+    </a></div>
+    <div class="footer-right"><a class="reblog-button" href="{ReblogURL}">
+        <i class="fak fa-chirp-retweet"></i>
+    </a>
+    <a class="like-button">
+        {LikeButton}
+    </a>
+    <a href="https://www.tumblr.com/{Name}/{PostID}">
+        <i class="fak fa-chirp-share"></i>
+    </a></div>
+</div>{/block:Date}
+
+</article>{block:PermalinkPage}{block:PostNotes}
+
+<!-- post notes -->
+
+<article class="post notes-container">
+    {PostNotes-64}
+</article>{/block:PostNotes}{/block:PermalinkPage}{/block:Posts}{block:Pagination}<!-- pagination -->
+
+<div class="pagination">
+    <a class="prev" {block:PreviousPage} href="{PreviousPage}" {/block:PreviousPage}>{lang:Back}</a>
+    <a id="next" class="next" {block:NextPage} href="{NextPage}" {/block:NextPage}>{lang:Next}</a>
+</div>{/block:Pagination}{block:PermalinkPagination}<!-- post pagination -->
+
+<div class="pagination">
+    <a class="prev" {block:PreviousPost} href="{PreviousPost}" {/block:PreviousPost}>{lang:Previous post}</a>
+    <a class="next" {block:NextPost} href="{NextPost}" {/block:NextPost}>{lang:Next post}</a>
+</div>{/block:PermalinkPagination}
+
+</section>
+
+<aside class="sticky">
+    <div class="stick-inner side-inner">{block:PermalinkPage}
+        <div class="sidebar-box related">{block:ifRelatedAccountsTitle}
+            <div class="s-title">{text:Related Accounts Title}</div>{/block:ifRelatedAccountsTitle}
+            <a class="account" href="/">{block:ifAvatarImage}
+            <img src="{image:Avatar}">{/block:ifAvatarImage}{block:ifNotAvatarImage}
+            <img src="{PortraitURL-128}">{/block:ifNotAvatarImage}
+            <div class="account-info">
+                <h3>{block:ifName}{text:Name}{/block:ifName}{block:ifNotName}{Title}{/block:ifNotName}</h3>
+                <h4>@{Name}</h4>
+            </div>
+            </a>{block:Posts}{block:Date}{block:RebloggedFrom}
+            <a class="account" href="{ReblogParentUrl}" target="_blank">
+                <img src="{ReblogParentPortraitURL-128}">
+                <div class="account-info">
+                    <h3>{ReblogParentTitle}</h3>
+                    <h4>@{ReblogParentName}</h4>
+                </div>
+            </a>{/block:RebloggedFrom}{/block:Date}{/block:Posts}
+        </div>{/block:PermalinkPage}{block:ifUpdatesDescription}
+        <div class="sidebar-box s-updates">{block:ifUpdatesTitle}
+            <div class="s-title">{text:Updates Title}</div>{/block:ifUpdatesTitle}
+            <div class="s-text">{text:Updates Description}</div>
+        </div>{/block:ifUpdatesDescription}{block:ifSidebarImage}
+        <div class="sidebar-box s-image">
+            <img src="{image:Sidebar}">
+        </div>{/block:ifSidebarImage}{block:ifAccountsseparatedbycommas}
+        <div class="sidebar-box">{block:ifSuggestedAccountsTitle}
+            <div class="s-title">{text:Suggested Accounts Title}</div>{/block:ifSuggestedAccountsTitle}
+            <div id="suggestedAccounts"></div>
+        </div>{/block:ifAccountsseparatedbytitle}{block:ifTagsseparatedbycommas}
+        <div class="sidebar-box">{block:ifTrendingTagsTitle}
+            <div class="s-title">{text:Trending Tags Title}</div>{/block:ifTrendingTagsTitle}
+            <div id="trendingTags"></div>
+        </div>{/block:ifTagsseparatedbycommas}
+        <div class="sidebar-footer">
+        <a class="dead-link">© {CopyrightYears}</a> <a href="/">{lang:Home}</a> <a href="/archive">{lang:Archive}</a><!-- theme credit (please don't change or remove!!! thank u) --> <a href="https://rachaelthemes.tumblr.com/" target="_blank">Theme</a> <a href="https://www.tumblr.com/" target="_blank">{lang:Powered by Tumblr}</a> <a href="https://www.twitter.com/" target="_blank">{block:English}Inspired by Twitter{/block:English}{block:NotEnglish}Twitter{/block:NotEnglish}</a>
+        </div>
+    </div>
+</aside>
+
+</main></body>
+    
+</html>
