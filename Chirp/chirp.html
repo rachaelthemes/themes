@@ -17,6 +17,7 @@
 <meta name="select:Color Scheme" content="accent2" title="Accent (Dark)"/>
 <!--body font options-->
 <meta name="select:Font" content="Chirp" title="Twitter (Chirp)">
+<meta name="select:Font" content="Chirp2023" title="Chirp 2023 Version">
 <meta name="select:Font" content="Favorit" title="Tumblr (Favorit)">
 <meta name="select:Font" content="Helvetica Neue" title="System Default">
 <meta name="select:Font" content="Archivo" title="Archivo">
@@ -128,7 +129,7 @@ Inspired by Twitter
 
 I am not affiliated with Twitter, nor do I claim to own any Twitter assets used in this theme.
 
-    Version 2.0.1 | updated February 2nd, 2023
+    Version 2.0.2 | updated February 2nd, 2023
 
 For theme information, help, FAQs, and more:
     https://rachaelthemes.com/chirp
@@ -160,7 +161,7 @@ CREDITS
     <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
     {NewPostStyles}
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/Jwkrmebtp/chirp.css">
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/hBkrphe37/chirp.css">
 <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/XYyrme1uj/chirp-photoset.min.css">
 
 <!-- font awesome -->
@@ -168,7 +169,7 @@ CREDITS
 
 <!-- js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="https://static.tumblr.com/zgb0z1w/2Zirme12s/chirp.min.js"></script>{block:ifEndlessScroll}{block:IndexPage}
+<script src="https://static.tumblr.com/zgb0z1w/0narphe3n/chirp.min.js"></script>{block:ifEndlessScroll}{block:IndexPage}
 <script src="https://static.tumblr.com/zgb0z1w/Pmurme12e/chirp-endless.min.js" type="module"></script>{/block:IndexPage}{/block:ifEndlessScroll}
 
 <script type="text/javascript">$(document).ready(function(){customFonts("{select:Font}");var c="{select:Color Scheme}";var s,t;if(c=="dim"){s="#15202c";t="#f7f9f9";}else if(c=="lights"){s="#000000";t="#e7e9ea";}else if(c=="tumblr"){s="#061a34";t="#ffffff";}else if(c=="dark"){s="#000000";t="#ffffff";}else if(c=="accent"){s="{color:Accent}";t="#ffffff";}else if(c=="accent2"){s="{color:Accent}";t="#000000";}else{s="#ffffff";t="#71767b";};tumblrControls(s,t,"{Name}"{block:Posts}{block:PermalinkPage}{block:Date},"{PostID}","{RelativePermalink}","true"{/block:Date}{/block:PermalinkPage}{/block:Posts});{block:ifAccountsSeparatedByCommas}pullAccounts("{text:Accounts Separated By Commas}");{/block:ifAccountsSeparatedByCommas}{block:ifTagsSeparatedByCommas}pullTags("{text:Tags separated by commas}","{Name}");{/block:ifTagsSeparatedByCommas}$(".shorten-link").show();noteCount();postCount("{Name}");});</script>
