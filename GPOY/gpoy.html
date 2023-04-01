@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+{block:Options}<!-- tumblr variables -->
+<!-- image options -->
+<meta name="image:Background" content="https://static.tumblr.com/zgb0z1w/Eehrpvv9n/favicon.gif"/>
+<meta name="image:Favicon" content="https://static.tumblr.com/zgb0z1w/Eehrpvv9n/favicon.gif"/>
+<!-- color scheme selection -->
+<meta name="select:Color Scheme" content="default" title="Default"/>
+<meta name="select:Color Scheme" content="mod" title="Modern Blue"/>
+<meta name="select:Color Scheme" content="dark" title="Dark"/>
+<meta name="select:Color Scheme" content="pic g1" title="Galaxy 1"/>
+<meta name="select:Color Scheme" content="pic g2" title="Galaxy 2"/>
+<meta name="select:Color Scheme" content="pic g3" title="Galaxy 3"/>
+<meta name="select:Color Scheme" content="pic drw" title="Doctor Who"/>
+<meta name="select:Color Scheme" content="pic shr" title="Sherlock"/>
+<meta name="select:Color Scheme" content="pic spn" title="Supernatural"/>
+<meta name="select:Color Scheme" content="pic upl" title="Uploaded Image"/>
+<!-- font size -->
+<meta name="select:Font Size" content="14px" title="14px (Default)">
+<meta name="select:Font Size" content="15px" title="15px">
+<meta name="select:Font Size" content="16px" title="16px">
+<!-- post width -->
+<meta name="select:Post Size" content="500px" title="500px (Default)">
+<meta name="select:Post Size" content="540px" title="540px">
+<meta name="select:Post Size" content="600px" title="600px">
+<meta name="select:Post Size" content="650px" title="650px">
+<meta name="select:Post Size" content="700px" title="700px">
+<!-- sidebar width -->
+<meta name="select:Sidebar Width" content="215px" title="215px (Default)">
+<meta name="select:Sidebar Width" content="200px" title="200px">
+<meta name="select:Sidebar Width" content="250px" title="250px">
+<meta name="select:Sidebar Width" content="275px" title="275px">
+<meta name="select:Sidebar Width" content="300px" title="300px">
+<!-- boolean options -->
+<meta name="if:Always 99 Unread" content="0"/>
+<meta name="if:Blockquote Replies" content="0"/>
+<meta name="if:Create Post Section" content="0"/>
+<meta name="if:Endless Scroll" content="0"/>
+<!-- text options -->
+<meta name="text:Title" content=""/>
+<meta name="text:Description" content=""/>
+<meta name="text:Home Link Title" content="Home"/>
+<meta name="text:Ask Link Title" content="Ask"/>
+<meta name="text:Submit Link Title" content="Submit"/>
+<meta name="text:Archive Link Title" content="Archive"/>
+<!-- tracked tags -->
+<meta name="text:Tags separated by commas" content="dogs, cats, videos"/>
+<meta name="text:Accounts separated by commas" content="staff, changes"/>
+
+<!-- end tumblr variables -->{/block:Options}
+
+<html lang="{block:English}en-US{/block:English}{block:German}de-DE{/block:German}{block:French}fr-FR{/block:French}{block:Italian}it-IT{/block:Italian}{block:Japanese}ja-JP{/block:Japanese}{block:Turkish}tr-TR{/block:Turkish}{block:Spanish}es-ES{/block:Spanish}{block:Russian}ru-RU{/block:Russian}{block:Polish}pl-PL{/block:Polish}{block:PortuguesePT}pt-PT{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl-NL{/block:Dutch}{block:Indonesian}id-ID{/block:Indonesian}{block:Hindi}hi-IN{/block:Hindi}{block:Korean}ko-KR{/block:Korean}{block:ChineseSimplified}zh-CN{/block:ChineseSimplified}{block:ChineseTraditional}zh-TW{/block:ChineseTraditional}{block:ChineseHK}zh-HK{/block:ChineseHK}">
+
+<!--
+
+TUMBLR THEME: GPOY | © Rachael (@rachaelthemes)
+
+    Version 1.0.0 | released April 1st, 2023
+
+For theme information, help, FAQs, and more:
+    https://rachaelthemes.com/gpoy
+
+By using this theme, you agree to these terms and conditions:
+    https://rachaelthemes.com/terms
+
+
+CREDITS
+
+ – Favorit font, iconography, and design inspiration from Tumblr
+ – Iconography from Font Awesome 6
+ – Resize Videos by @shythemes
+ 
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="{MetaDescription}" name="description">
+    <title>{block:ifTitle}{text:Title}{/block:ifTitle}{block:ifNotTitle}{Title}{/block:ifNotTitle}</title>
+    <meta content="website" property="og:type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="shortcut icon" href="{block:ifNotFaviconImage}{Favicon}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
+    <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{Favicon}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
+    {NewPostStyles}
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/sborsf04w/gpoy.css">
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/a911f80a70.js" crossorigin="anonymous"></script>
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://static.tumblr.com/zgb0z1w/uY2rsevv9/gpoy.min.js"></script>{block:ifEndlessScroll}{block:IndexPage}
+<script src="https://static.tumblr.com/zgb0z1w/Hbrrsevvm/gpoy-endless.min.js" type="module"></script>{/block:IndexPage}{/block:ifEndlessScroll}
+
+<script type="text/javascript">$(document).ready(function(){{block:ifTagsSeparatedByCommas}pullTags("{text:Tags separated by commas}","{Name}");{/block:ifTagsSeparatedByCommas}{block:ifAccountsSeparatedByCommas}pullAccounts("{text:Accounts Separated By Commas}");{/block:ifAccountsSeparatedByCommas}});</script>
+
+<style type="text/css">
+
+/* ---------- CODE THAT WON'T WORK IN THE CSS FILE ---------- */
+
+:root {
+    --fsz: {select:Font Size}; /* font size */
+    --psz: {select:Post Size}; /* post width */
+    --sbw: {select:Sidebar Width}; /* sidebar width */
+}{block:ifAlways99Unread}
+
+.logo::after {
+    content: "99+";
+    background: #e53f2a;
+    color: #fff;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 2px 4px;
+    float: left;
+    margin: 3px -270px 0 200px;
+    font-size: calc(var(--fsz) - 2px);
+    font-weight: 700;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 40%);
+}{/block:ifAlways99Unread}
+
+</style>
+
+</head>
+
+<body class="{select:Color Scheme} {block:IndexPage}index{block:ifEndlessScroll} endless-scroll{/block:ifEndlessScroll}{/block:IndexPage}{block:AskPage} ask-page{/block:AskPage}{block:SubmitPage} submit-page{/block:SubmitPage}">
+
+<!-- body container -->
+
+<div class="body-container">
+
+<!-- header -->
+
+<header>
+    <a class="logo" href="/"><img src="https://static.tumblr.com/zgb0z1w/zdfrpsxwj/logo.png"></a>
+</header>
+
+<main>
+
+<!-- posts container -->
+
+<section id="posts">{block:ifCreatePostSection}
+
+<!-- fake "create post" section -->
+
+<article class="post create-post">
+    <div class="post-avatar">
+        <a href="/"><img src="{PortraitURL-128}"></a>
+    </div>
+    <div class="post-triangle"></div>
+    <div class="post-content">
+        <div class="post-type-nav">
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/Tm9rpuj7f/post-type-text.png"></div> {lang:Text}
+            </div>
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/wosrpujym/post-type-photo.png"></div> {lang:Photo}
+            </div>
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/9WFrpukbn/post-type-quote.png"></div> {lang:Quote}
+            </div>
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/vA6rpukr6/post-type-link.png"></div> {lang:Link}
+            </div>
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/PAgrpul1b/post-type-chat.png"></div> {lang:Chat}
+            </div>
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/eh0rpulj7/post-type-audio.png"></div> {lang:Audio}
+            </div>
+            <div class="post-type-item">
+                <div class="post-type-icon"><img src="https://static.tumblr.com/zgb0z1w/XAPrpulvq/post-type-video.png"></div> {lang:Video}
+            </div>
+        </div>
+    </div>
+</article>{/block:ifCreatePostSection}
+
+<div class="post-feed"{block:ifEndlessScroll}{block:Pagination} role="feed"{/block:Pagination}{/block:ifEndlessScroll}>{block:SearchPage}{block:NoSearchResults}
+
+<article class="post post-text">
+    <div class="post-avatar"><img src="{PortraitURL-128}"></div>
+    <div class="post-triangle"></div>
+    <div class="post-content">
+        <h2 class="post-title">{lang:Sorry no search results found}.</h2>
+    </div>
+</article>{/block:NoSearchResults}{/block:SearchPage}{block:NoPosts}
+
+<article class="post post-text">
+    <div class="post-avatar"><img src="{PortraitURL-128}"></div>
+    <div class="post-triangle"></div>
+    <div class="post-content">
+        <h2 class="post-title">{lang:This minimalist Tumblr has no posts}</h2>
+    </div>
+</article>{/block:NoPosts}{block:Posts inlineMediaWidth="700"}
+
+<!-- POST{block:Date} ID {PostID}{/block:Date} -->
+
+<article {block:Date}id="{PostID}" {/block:Date}class="post post-{PostType} {block:Date}has-date{/block:Date}">
+
+<!-- post avatar -->
+
+<div class="post-avatar">
+    <img src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{ReblogParentPortraitURL-128}{/block:RebloggedFrom}">
+</div>
+<div class="post-triangle"></div>
+
+<!-- post content -->
+
+<div class="post-content">{block:Date}
+
+<a class="dog-ear" href="{Permalink}" title="{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {CapitalAmPm}"></a>
+
+<!-- post header -->
+
+<div class="post-header">
+    <div class="post-names">
+        <a href="/">{Name}</a>{block:RebloggedFrom} reblogged <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}:
+    </div>
+    <div class="post-controls">
+        <a href="{Permalink}" class="post-notes">{NoteCount}</a>
+        <div class="button rblg">{ReblogButton}</div>
+        <div class="button like">{LikeButton}</div>
+    </div>
+</div>{/block:Date}{block:Text}
+
+{block:Title}<h2 class="title">{Title}</h2>{/block:Title}{/block:Text}{block:Photo}
+
+<div class="image-container">
+    <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
+        <img src="{PhotoURL-HighRes}" {block:HighRes}class="high-res"{/block:HighRes} alt="{PhotoAlt}" />
+    </a>
+</div>{/block:Photo}{block:Photoset}
+
+{Photoset}{/block:Photoset}{block:Video}
+
+<div class="video">
+    {Video-700}
+</div>{/block:Video}{block:Quote}
+
+<div class="quote {Length}">{Quote}</div>{block:Source}
+<p class="quote-source">{Source}</p>{/block:Source}{/block:Quote}{block:Link}
+
+<div class="link-container">
+    <a {Target} href="{URL}" class="link"><h2 class="link-title">{Name}</h2></a>{block:Excerpt}
+    <p class="link-excerpt">{Excerpt}</p>{/block:Excerpt}
+</div>{/block:Link}{block:Chat}
+
+{block:Title}<h2 class="post-title">{Title}</h2>
+{/block:Title}<div class="chat">{block:Lines}
+    <div class="chat-line">{block:Label}<span class="chat-label">{Label}</span>{/block:Label} {Line}</div>{/block:Lines}
+</div>{/block:Chat}{block:Audio}
+
+{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}{block:AudioPlayer}
+
+<div class="audio-inline">{block:AlbumArt}
+    <img class="album-art" src="{AlbumArtURL}">{/block:AlbumArt}
+    <div class="track-info">{AudioPlayer}</div>
+</div>{/block:AudioPlayer}
+<p>{block:TrackName}{TrackName}{/block:TrackName}{block:Artist} — {Artist}{/block:Artist}</p>{/block:Audio}{block:Answer}
+
+<div class="question">{Question}</div>
+<div class="asker"><img src="{AskerPortraitURL-64}">{Asker}</div>{/block:Answer}{block:ifBlockquoteReplies}
+
+<!-- post caption -->
+
+<div class="post-caption">
+    {block:Text}{Body}{/block:Text}{block:Photo}{block:Caption}{Caption}{/block:Caption}{/block:Photo}{block:Panorama}{block:Caption}{Caption}{/block:Caption}{/block:Panorama}{block:Photoset}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}{block:Link}{block:Description}{Description}{/block:Description}{/block:Link}{block:Audio}{block:Caption}{Caption}{/block:Caption}{/block:Audio}{block:Video}{block:Caption}{Caption}{/block:Caption}{/block:Video}{block:Answer}{block:Answerer}<p>{Answerer}:</p><blockquote>{Answer}</blockquote>{/block:Answerer}{Replies}{/block:Answer}
+</div>{/block:ifBlockquoteReplies}{block:ifNotBlockquoteReplies}
+
+{block:NotReblog}<!-- original post content -->
+
+<div class="post-caption">
+    {block:Text}{Body}{/block:Text}{block:Photo}{block:Caption}{Caption}{/block:Caption}{/block:Photo}{block:Panorama}{block:Caption}{Caption}{/block:Caption}{/block:Panorama}{block:Photoset}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}{block:Link}{block:Description}{Description}{/block:Description}{/block:Link}{block:Audio}{block:Caption}{Caption}{/block:Caption}{/block:Audio}{block:Video}{block:Caption}{Caption}{/block:Caption}{/block:Video}{block:Answer}{Replies}{/block:Answer}
+</div>{/block:NotReblog}{block:RebloggedFrom}<!-- reblog chains -->
+
+<div class="post-reblog-list">{block:Answer}{block:Answerer}
+    <div class="post-reblog-item">
+        <div class="post-reblog-header">
+            <div class="reblog-item-avatar">
+                <a><img src="{AnswererPortraitURL-64}"></a>
+            </div>
+            <div class="reblog-item-username">
+                {Answerer}
+            </div>
+        </div>
+        <blockquote class="reblog-item-body">
+            {Answer}
+        </blockquote>
+    </div>{/block:Answerer}{/block:Answer}{block:Reblogs}
+    <div class="post-reblog-item">
+        <div class="post-reblog-header">
+            <div class="reblog-item-avatar">{block:IsActive}
+                <a target="_blank" href="{Permalink}"><img src="{PortraitURL-64}" alt="{Username}"></a>{/block:IsActive}{block:IsDeactivated}
+                <span class="deactivated"><img src="{PortraitURL-64}" alt="{Username}"></span>{/block:IsDeactivated}
+            </div>
+            <div class="reblog-item-username">{block:IsActive}
+                <a target="_blank" class="post-tumblelog-name" href="{Permalink}">{Username}</a>{/block:IsActive}{block:IsDeactivated}
+                <span class="deactivated">{Username}</span>{/block:IsDeactivated}
+            </div>
+        </div>
+        <blockquote class="reblog-item-body">
+            {Body}
+        </blockquote>
+    </div>{/block:Reblogs}
+</div>{/block:RebloggedFrom}{/block:ifNotBlockquoteReplies}{block:Date}
+
+<div class="post-meta">
+    {block:ContentSource}<a class="post-source meta-item" href="{SourceURL}">Source: {SourceTitle}</a>{/block:ContentSource}{block:HasTags}{block:Tags}<a class="post-tag meta-item" href="{TagURL}">#{Tag}</a>{/block:Tags}{/block:HasTags}
+</div>{/block:Date}
+
+</div>
+
+</article>{block:PermalinkPage}{block:PostNotes}
+
+<!-- post notes -->
+
+<article class="post notes-container">
+    <div class="post-content">
+        {PostNotes-64}
+    </div>
+</article>{/block:PostNotes}{/block:PermalinkPage}{/block:Posts}{block:Pagination}
+
+<!-- pagination -->
+
+<div class="pagination">
+    <a class="prev" {block:PreviousPage} href="{PreviousPage}" {/block:PreviousPage}>{lang:Back}</a>
+    <a id="next" class="next" {block:NextPage} href="{NextPage}" {/block:NextPage}>{lang:Next}</a>
+</div>{/block:Pagination}
+
+</div>
+
+<!-- end posts section -->
+
+</section>
+
+<!-- begin right sidebar -->
+
+<aside class="sidebar">
+
+<!-- search bar -->
+
+<form class="sidebar-search" method="get" action="/search">
+    <input type="text" name="q" placeholder="{lang:Search}" value="">
+    <button class="enter" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+
+<!-- about section -->
+
+<div class="sidebar-about">
+    <div class="about-title">{block:ifTitle}{text:Title}{/block:ifTitle}{block:ifNotTitle}{Title}{/block:ifNotTitle}</div>
+    {block:ifDescription}{text:Description}{/block:ifDescription}{block:ifNotDescription}{Description}{/block:ifNotDescription}
+</div>
+
+<!-- follow button -->
+
+<a class="button follow-button" href="https://www.tumblr.com/follow/{Name}"><i class="fa-solid fa-user"></i> {lang:Follow} {Name}</a>
+
+<!-- navigation links -->
+
+<div class="button-section">
+    <a class="button home-link" href="/"><i class="fa-solid fa-house"></i> {block:ifHomeLinkTitle}{text:Home Link Title}{/block:ifHomeLinkTitle}{block:ifNotHomeLinkTitle}{lang:Home}{/block:ifNotHomeLinkTitle}</a>{block:AskEnabled}
+    <a class="button ask-link" href="/ask"><i class="fa-solid fa-envelope"></i> {block:ifAskLinkTitle}{text:Ask Link Title}{/block:ifAskLinkTitle}{block:ifNotAskLinkTitle}Ask{/block:ifNotAskLinkTitle}</a>{/block:AskEnabled}{block:SubmissionsEnabled}
+    <a class="button submit-link" href="/submit"><i class="fa-solid fa-down-to-bracket"></i> {block:ifSubmitLinkTitle}{text:Submit Link Title}{/block:ifSubmitLinkTitle}{block:ifNotSubmitLinkTitle}Submit{/block:ifNotSubmitLinkTitle}</a>{/block:SubmissionsEnabled}
+    <a class="button archive-link" href="/archive"><i class="fa-solid fa-box-archive"></i> {block:ifArchiveLinkTitle}{text:Archive Link Title}{/block:ifArchiveLinkTitle}{block:ifNotArchiveLinkTitle}{lang:Archive}{/block:ifNotArchiveLinkTitle}</a>{block:HasPages}{block:Pages}
+    <a class="button page-link" href="{URL}"><i class="fa-solid fa-square-up-right"></i> {Label}</a>{/block:Pages}{/block:HasPages}
+</div>{block:ifTagsseparatedbycommas}
+
+<!-- tag links -->
+
+<div class="button-section" id="trackedTags"></div>{/block:ifTagsseparatedbycommas}{block:ifAccountsseparatedbycommas}
+
+<!-- suggested account links -->
+
+<div class="button-section" id="suggestedAccounts"></div>{/block:ifAccountsseparatedbycommas}
+
+<!-- sidebar footer -->
+
+<div class="sidebar-footer">
+    <a class="copyright">© {CopyrightYears}</a>
+    <a href="https://www.tumblr.com/">{lang:Powered by Tumblr}</a><br/>
+    <a href="/">{lang:Home}</a>
+    <a href="/archive">{lang:Archive}</a>
+    <a href="https://rachaelthemes.tumblr.com/">Theme</a>
+</div>
+
+<!-- end sidebar -->
+
+</aside>
+
+</main>
+
+<!-- end body container -->
+
+</div>{block:ifEndlessScroll}{block:IndexPage}
+
+<!-- scroll to top link -->
+
+<a id="top"><img src="https://static.tumblr.com/zgb0z1w/SFbrs54ub/back-to-top.svg"></a>{/block:IndexPage}{/block:ifEndlessScroll}
+
+</body>
+
+</html>
