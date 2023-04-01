@@ -229,7 +229,9 @@ CREDITS
     <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
         <img src="{PhotoURL-HighRes}" {block:HighRes}class="high-res"{/block:HighRes} alt="{PhotoAlt}" />
     </a>
-</div>{/block:Photo}{block:Photoset}
+</div>{/block:Photo}{block:Panorama}{LinkOpenTag}
+
+<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}{/block:Panorama}{block:Photoset}
 
 {Photoset}{/block:Photoset}{block:Video}
 
