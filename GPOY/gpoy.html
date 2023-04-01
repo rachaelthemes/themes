@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-{block:Options}<!-- tumblr variables -->
+<!DOCTYPE html>{block:Options}
+
+<!-- tumblr variables -->
 <!-- image options -->
-<meta name="image:Background" content="https://static.tumblr.com/zgb0z1w/Eehrpvv9n/favicon.gif"/>
+<meta name="image:Background" content=""/>
 <meta name="image:Favicon" content="https://static.tumblr.com/zgb0z1w/Eehrpvv9n/favicon.gif"/>
 <!-- color scheme selection -->
 <meta name="select:Color Scheme" content="default" title="Default"/>
@@ -45,7 +46,6 @@
 <!-- tracked tags -->
 <meta name="text:Tags separated by commas" content="dogs, cats, videos"/>
 <meta name="text:Accounts separated by commas" content="staff, changes"/>
-
 <!-- end tumblr variables -->{/block:Options}
 
 <html lang="{block:English}en-US{/block:English}{block:German}de-DE{/block:German}{block:French}fr-FR{/block:French}{block:Italian}it-IT{/block:Italian}{block:Japanese}ja-JP{/block:Japanese}{block:Turkish}tr-TR{/block:Turkish}{block:Spanish}es-ES{/block:Spanish}{block:Russian}ru-RU{/block:Russian}{block:Polish}pl-PL{/block:Polish}{block:PortuguesePT}pt-PT{/block:PortuguesePT}{block:PortugueseBR}pt-BR{/block:PortugueseBR}{block:Dutch}nl-NL{/block:Dutch}{block:Indonesian}id-ID{/block:Indonesian}{block:Hindi}hi-IN{/block:Hindi}{block:Korean}ko-KR{/block:Korean}{block:ChineseSimplified}zh-CN{/block:ChineseSimplified}{block:ChineseTraditional}zh-TW{/block:ChineseTraditional}{block:ChineseHK}zh-HK{/block:ChineseHK}">
@@ -82,6 +82,7 @@ CREDITS
     <link rel="shortcut icon" href="{block:ifNotFaviconImage}{Favicon}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
     <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{Favicon}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
     {NewPostStyles}
+
 <!-- css -->
 <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/sborsf04w/gpoy.css">
 
@@ -118,6 +119,12 @@ CREDITS
     font-weight: 700;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 40%);
 }{/block:ifAlways99Unread}
+
+/* ---------- CUSTOM CSS ---------- */
+
+{CustomCSS}
+
+/* ---------- END CSS ---------- */
 
 </style>
 
@@ -175,6 +182,8 @@ CREDITS
     </div>
 </article>{/block:ifCreatePostSection}
 
+<!-- begin endless scroll container -->
+
 <div class="post-feed"{block:ifEndlessScroll}{block:Pagination} role="feed"{/block:Pagination}{/block:ifEndlessScroll}>{block:SearchPage}{block:NoSearchResults}
 
 <article class="post post-text">
@@ -195,13 +204,12 @@ CREDITS
 
 <!-- POST{block:Date} ID {PostID}{/block:Date} -->
 
-<article {block:Date}id="{PostID}" {/block:Date}class="post post-{PostType} {block:Date}has-date{/block:Date}">
+<article {block:Date}id="{PostID}" {/block:Date}class="post post-{PostType}{block:Date} has-date{/block:Date}">
 
 <!-- post avatar -->
 
-<div class="post-avatar">
-    <img src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{ReblogParentPortraitURL-128}{/block:RebloggedFrom}">
-</div>
+<div class="post-avatar"><img src="{block:NotReblog}{PortraitURL-128}{/block:NotReblog}{block:RebloggedFrom}{ReblogParentPortraitURL-128}{/block:RebloggedFrom}"></div>
+
 <div class="post-triangle"></div>
 
 <!-- post content -->
@@ -221,17 +229,19 @@ CREDITS
         <div class="button rblg">{ReblogButton}</div>
         <div class="button like">{LikeButton}</div>
     </div>
-</div>{/block:Date}{block:Text}
+</div>{/block:Date}
 
-{block:Title}<h2 class="title">{Title}</h2>{/block:Title}{/block:Text}{block:Photo}
+<!-- post inner content -->{block:Text}{block:Title}
+
+<h2 class="title">{Title}</h2>{/block:Title}{/block:Text}{block:Photo}
 
 <div class="image-container">
     <a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false">
         <img src="{PhotoURL-HighRes}" {block:HighRes}class="high-res"{/block:HighRes} alt="{PhotoAlt}" />
     </a>
-</div>{/block:Photo}{block:Panorama}{LinkOpenTag}
+</div>{/block:Photo}{block:Panorama}
 
-<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}{/block:Panorama}{block:Photoset}
+{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}{/block:Panorama}{block:Photoset}
 
 {Photoset}{/block:Photoset}{block:Video}
 
@@ -252,16 +262,15 @@ CREDITS
     <div class="chat-line">{block:Label}<span class="chat-label">{Label}</span>{/block:Label} {Line}</div>{/block:Lines}
 </div>{/block:Chat}{block:Audio}
 
-{block:AudioEmbed}{AudioEmbed}{/block:AudioEmbed}{block:AudioPlayer}
-
-<div class="audio-inline">{block:AlbumArt}
+{block:AudioEmbed}{AudioEmbed}
+{/block:AudioEmbed}{block:AudioPlayer}<div class="audio-inline">{block:AlbumArt}
     <img class="album-art" src="{AlbumArtURL}">{/block:AlbumArt}
     <div class="track-info">{AudioPlayer}</div>
-</div>{/block:AudioPlayer}
-<p>{block:TrackName}{TrackName}{/block:TrackName}{block:Artist} — {Artist}{/block:Artist}</p>{/block:Audio}{block:Answer}
+</div>
+{/block:AudioPlayer}<p>{block:TrackName}{TrackName}{/block:TrackName}{block:Artist} — {Artist}{/block:Artist}</p>{/block:Audio}{block:Answer}
 
 <div class="question">{Question}</div>
-<div class="asker"><img src="{AskerPortraitURL-64}">{Asker}</div>{/block:Answer}{block:ifBlockquoteReplies}
+<div class="asker"><img src="{AskerPortraitURL-64}"> {Asker}</div>{/block:Answer}{block:ifBlockquoteReplies}
 
 <!-- post caption -->
 
@@ -291,13 +300,11 @@ CREDITS
     </div>{/block:Answerer}{/block:Answer}{block:Reblogs}
     <div class="post-reblog-item">
         <div class="post-reblog-header">
-            <div class="reblog-item-avatar">{block:IsActive}
-                <a target="_blank" href="{Permalink}"><img src="{PortraitURL-64}" alt="{Username}"></a>{/block:IsActive}{block:IsDeactivated}
-                <span class="deactivated"><img src="{PortraitURL-64}" alt="{Username}"></span>{/block:IsDeactivated}
+            <div class="reblog-item-avatar">
+                <a target="_blank" href="{Permalink}"><img src="{PortraitURL-64}" alt="{Username}"></a>
             </div>
-            <div class="reblog-item-username">{block:IsActive}
-                <a target="_blank" class="post-tumblelog-name" href="{Permalink}">{Username}</a>{/block:IsActive}{block:IsDeactivated}
-                <span class="deactivated">{Username}</span>{/block:IsDeactivated}
+            <div class="reblog-item-username">
+                <a target="_blank" class="post-tumblelog-name" href="{Permalink}">{Username}</a>
             </div>
         </div>
         <blockquote class="reblog-item-body">
@@ -329,9 +336,9 @@ CREDITS
     <a id="next" class="next" {block:NextPage} href="{NextPage}" {/block:NextPage}>{lang:Next}</a>
 </div>{/block:Pagination}
 
-</div>
-
 <!-- end posts section -->
+
+</div>
 
 </section>
 
