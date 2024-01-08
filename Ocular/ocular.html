@@ -178,7 +178,7 @@ CREDITS
     <link rel="apple-touch-icon" href="{block:ifNotFaviconImage}{block:ifAvatarImage}{image:Avatar}{/block:ifAvatarImage}{block:ifNotAvatarImage}{Favicon}{/block:ifNotAvatarImage}{/block:ifNotFaviconImage}{block:ifFaviconImage}{image:Favicon}{/block:ifFaviconImage}" />
     {NewPostStyles}
 <!--css-->
-<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/qwKs6yq68/ocular-3.css">
+<link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/IdSs6yqy7/ocular-3.css">
 <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/Keqs6veeo/ocular-fonts.css">
 <link rel="stylesheet" type="text/css" href="https://static.tumblr.com/zgb0z1w/dgnrdhapm/ocular-photoset.min.css">
 
@@ -256,13 +256,14 @@ section#posts[aria-busy="true"]::after {
     main#page-container section#posts { padding: 0; }
     .sidebar { width: var(--post-size); position: relative;}
     
-    body.header-hide.a-circle section#sidebar,
-    body.header-hide.a-square section#sidebar {
-        padding-top: calc(((var(--avatar-uncalc)) / 2) + 1px);
+    body.header-hide.a-circle .sidebar,
+    body.header-hide.a-circle .sidebar,
+    body.header-hide.a-square .sidebar {
+        margin-top: calc(((var(--avatar-uncalc)) / 2) + 1px);
     }
     
-    body.header-hide.a-uncropped section#sidebar {
-        padding-top: calc(var(--avatar-image) * 2 / 3);
+    body.header-hide.a-uncropped .sidebar {
+        margin-top: calc(var(--avatar-image) * 2 / 3);
     }
 
 }
